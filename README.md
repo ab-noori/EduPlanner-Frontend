@@ -81,9 +81,15 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo & Project intro <a name="live-demo"></a>
+## 🚀 Live Demo <a name="live-demo"></a>
  - [N/A]()
 
+## 🔗 Back End Link <a name="documentation"></a>
+- [EduPlanner Backend](https://github.com/ab-noori/EduPlanner-Backend)
+  
+  > _Our backend code is stored in a separate repository and is built using ruby on rails. The backend is responsible for processing data and handling API requests from the frontend. To access our backend code, please click on the provided link below._
+
+ 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
