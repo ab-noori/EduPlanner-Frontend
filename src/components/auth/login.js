@@ -1,6 +1,18 @@
+import AuthenticationLoginForm from '../../shared/login_auth_form';
+import '../../styles/auth.css';
+
 function Login() {
   return (
-    <div>login page</div>
+    <div className="auth_holder">
+      <h1 className="auth_header">Login</h1>
+      <AuthenticationLoginForm buttonName="Login" />
+      <section className="auth_links">
+        <a href="/signup" className="loginlink link">
+          Dont have an existing account..?
+          <b>  Signup</b>
+        </a>
+      </section>
+    </div>
   );
 }
 

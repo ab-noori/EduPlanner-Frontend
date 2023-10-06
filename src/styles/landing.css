@@ -39,7 +39,6 @@
 
   .login_button {
     padding: 0 20px;
-    background-color: var(--complimentary-color);
     font-size: 1.2rem;
     font-weight: bold;
     background-color: #acdb01;
@@ -69,6 +68,32 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .hover_text_holder {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 3;
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 90%;
+  }
+
+  .hover_text_title {
+    font-size: 2rem;
+    font-family: 'Lilita One', cursive;
+    color: white;
+    width: 100%;
+  }
+
+  .hover_text_description {
+    font-size: 1rem;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    width: 90%;
+    padding: 10px 12px;
+    border-radius: 4px;
   }
 
   .display_image {
@@ -148,9 +173,9 @@
 
   .login_button {
     padding: 15px 35px;
-    background-color: var(--complimentary-color);
     font-size: 1.2rem;
     font-weight: bold;
+    background-color: #acdb01;
   }
 
   .login_button:hover {
@@ -179,12 +204,49 @@
     align-items: center;
   }
 
+  .hover_text_holder {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 3;
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 90%;
+  }
+
+  .hover_text_title {
+    font-size: 4.5rem;
+    font-family: 'Lilita One', cursive;
+    color: white;
+    width: 100%;
+  }
+
+  .hover_text_description {
+    font-size: 1.8rem;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    width: 90%;
+    padding: 10px 12px;
+    border-radius: 4px;
+  }
+
   .display_image {
     width: 95vw;
     height: 100vh;
     margin-bottom: 10px;
     overflow-x: hidden;
     overflow-y: hidden;
+    box-sizing: border-box;
+  }
+
+  .display_image:nth-child(2) > .hover_text_holder {
+    text-align: right;
+    right: 4%;
+  }
+
+  .display_image:nth-child(2) > .hover_text_holder > .hover_text_description {
+    width: 100%;
+    padding-left: 100px;
   }
 
   .d_image_holder {
@@ -194,7 +256,7 @@
     position: absolute;
     z-index: 1;
     background-color: black;
-    opacity: 0.3;
+    opacity: 0.6;
   }
 
   .display_image > img {

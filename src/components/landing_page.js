@@ -9,9 +9,15 @@ import displayImage3 from '../assets/images/image_display_3.jpg';
 function LandingPage() {
   const navigate = useNavigate();
   const landingViews = [
-    { id: 1, image: displayImage1 },
-    { id: 2, image: displayImage2 },
-    { id: 3, image: displayImage3 },
+    {
+      id: 1, image: displayImage1, header: 'Efficient Course Booking', description: 'Eduplanner simplifies course booking, allowing students to quickly and efficiently register for the courses they need. By providing a user-friendly interface and intuitive navigation, Eduplanner minimizes the time spent on administrative tasks, enabling students to focus on their studies.',
+    },
+    {
+      id: 2, image: displayImage2, header: 'Personalized Learning Experience', description: 'Eduplanner leverages advanced algorithms to deliver a personalized learning experience. By analyzing your academic history, preferences, and learning style, Eduplanner recommends courses that align with your goals. This tailored approach helps you make informed decisions about your educational journey.',
+    },
+    {
+      id: 3, image: displayImage3, header: 'Real-time Updates and Notifications', description: 'Stay informed and connected with Eduplanner\'s real-time updates and notifications. Receive timely information about course changes, upcoming events, and assignment deadlines. With push notifications and email alerts, you\'ll never miss important updates, ensuring a seamless learning experience.',
+    },
   ];
   return (
     <div className="landing_page_holder">
@@ -26,7 +32,12 @@ function LandingPage() {
 
       <section className="imagery">
         {landingViews.map((obj) => (
-          <PictureView image={obj.image} key={obj.id} />
+          <PictureView
+            image={obj.image}
+            title={obj.header}
+            description={obj.description}
+            key={obj.id}
+          />
         ))}
       </section>
       <section className="footer">

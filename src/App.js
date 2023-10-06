@@ -1,21 +1,37 @@
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 import LandingPage from './components/landing_page';
 import Login from './components/auth/login';
 import Signup from './components/auth/signup';
+import Home from './components/home';
 
 function App() {
-  const status = sessionStorage.getItem('status');
+  const status = sessionStorage.getItem('status') || sessionStorage.setItem('status', 'false');
 
   return (
     <>
-      {status === 'false' ? (
+      <Router>
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="login" element={<Login />} />
-          <Route path="signup" element={<Signup />} />
+          {status === 'true' ? (
+            <>
+              <Route path="home" element={<Home />} />
+              <Route path="*" element={<Navigate to="home" replace />} />
+            </>
+          ) : (
+            <>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="login" element={<Login />} />
+              <Route path="signup" element={<Signup />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </>
+          )}
         </Routes>
-      ) : null}
+      </Router>
     </>
   );
 }
