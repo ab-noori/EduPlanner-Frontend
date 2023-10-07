@@ -1,39 +1,54 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Oswald&family=Satisfy&display=swap');
+
+:root {
+  --primary-color: #96bf01;
+  --secondary-color: #e2e3e5;
+  --complimentary-color: #ffb400;
+  --base-light: #fff;
+  --base-dark: #000;
+  --small-mg: 10px;
+  --mediumn-mg: 25px;
+  --large-mg: 50px;
+  --small-pd: 5px;
+  --mediumn-pd: 15px;
+  --large-pd: 30px;
+  --primary-font: 'Oswald', sans-serif;
+  --secondary-font: 'Satisfy', cursive;
+  --complimentary-font: 'Lilita One', cursive;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vh;
   }
 }
 
-.App-header {
-  background-color: #282c34;
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+a {
+  text-decoration: none;
+  color: darkgray;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.button {
+  max-height: 9vh;
+  border: 0;
+  border-radius: 5.5px;
+  box-shadow: 2px 2px 5px rgb(100, 100, 100);
 }
