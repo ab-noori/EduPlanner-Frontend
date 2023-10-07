@@ -2,12 +2,12 @@ import { Circles } from 'react-loader-spinner';
 
 const ModalCompBackground = {
   position: 'absolute',
-  zIdex: '100',
+  zIndex: '100',
   top: '0',
   right: '0',
   left: '0',
   bottom: '0',
-  backgroundColor: 'rgba(0, 0, 0, .7)',
+  backgroundColor: 'rgba(0, 0, 0, 0.7)',
 };
 
 const ModalCompHolder = {
