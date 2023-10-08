@@ -7,9 +7,10 @@
 .slick-prev {
   position: absolute;
   top: 50%;
-  left: -30px; /* Adjust the distance from the left border */
+  left: -20px; /* Adjust the distance from the left border */
   transform: translateY(-50%);
   z-index: 1; /* Ensure it's above the slides */
+
   /* Additional styling for the button, e.g., background color, etc. */
 }
 
@@ -17,9 +18,10 @@
 .slick-next {
   position: absolute;
   top: 50%;
-  right: -30px; /* Adjust the distance from the right border */
+  right: -20px; /* Adjust the distance from the right border */
   transform: translateY(-50%);
   z-index: 1; /* Ensure it's above the slides */
+
   /* Additional styling for the button, e.g., background color, etc. */
 }
 
@@ -34,5 +36,3 @@
   left: 20%; /* Position it within the image */
   z-index: -1; /* Place it behind other content */
 }
-
-
