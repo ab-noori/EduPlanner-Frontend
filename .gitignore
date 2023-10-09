@@ -5,6 +5,8 @@
 /.pnp
 .pnp.js
 
+/src/components/temp.jsx
+
 # testing
 /coverage
 
