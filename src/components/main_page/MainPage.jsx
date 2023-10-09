@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Slider from 'react-slick';
-import { fetchMainPage, selectMainPage } from '../app/features/mainPageSlice';
+import { fetchMainPage, selectMainPage } from '../../app/features/mainPageSlice';
 import Sidebar from './Sidebar';
 import Arrow from './Arrow';
 import 'slick-carousel/slick/slick.css';
