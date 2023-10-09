@@ -1,32 +1,31 @@
-// components/CourseDetail.js
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 
-import React from 'react';
-import { useSelector } from 'react-redux';
-import PropTypes from 'prop-types';
+const CourseDetail = () => {
+  const { id } = useParams();
+  const [course, setCourse] = useState(null);
 
-const CourseDetail = ({ match }) => {
-  const courseId = parseInt(match.params.id, 10);
-  console.log(match);
-  const courses = useSelector((state) => state.course.courses);
-  console.log(courses);
-  const course = courses.find((course) => course.id === courseId);
-  console.log(course);
+  useEffect(() => {
+    fetch(`http://127.0.0.1:3000/api/courses/${id}`)
+      .then((response) => response.json())
+      .then((data) => setCourse(data))
+      .catch((error) => console.error('Error fetching course:', error));
+  }, [id]);
+
+  const handleReserveClick = () => {
+    console.log(`Course ${course.name} reserved!`);
+    // Implement your reservation logic here
+  };
 
   if (!course) {
     return <div>Loading...</div>;
   }
-
-  const handleReserveClick = () => {
-    // Implement reservation logic here
-    console.log(`Course ${course.name} reserved!`);
-  };
 
   return (
     <div>
       <h2>{course.name}</h2>
       <p>
         Description:
-        {' '}
         {course.description}
       </p>
       <p>
@@ -35,7 +34,6 @@ const CourseDetail = ({ match }) => {
       </p>
       <p>
         Start Date:
-        {' '}
         {course.startDate}
       </p>
       <p>
@@ -46,22 +44,6 @@ const CourseDetail = ({ match }) => {
       <button type="button" onClick={handleReserveClick}>Reserve</button>
     </div>
   );
-};
-
-CourseDetail.defaultProps = {
-  match: {
-    params: {
-      id: null,
-    },
-  },
-};
-
-CourseDetail.propTypes = {
-  match: PropTypes.shape({
-    params: PropTypes.shape({
-      id: PropTypes.string,
-    }),
-  }),
 };
 
 export default CourseDetail;
