@@ -22,7 +22,6 @@ function Sidebar() {
           <li className="nav-item">
             <h3 className="nav-link">Navlink 4</h3>
           </li>
-          {/* Add your sidebar links here */}
         </ul>
       </div>
     </nav>
