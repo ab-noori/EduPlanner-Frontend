@@ -10,6 +10,7 @@ import MainPage from './components/main_page/MainPage';
 import LandingPage from './components/landing_page';
 import Login from './components/auth/login';
 import Signup from './components/auth/signup';
+import CourseForm from './components/course/CourseForm';
 
 function App() {
   const status = sessionStorage.getItem('status') || sessionStorage.setItem('status', 'false');
@@ -22,6 +23,7 @@ function App() {
             {status === 'true' ? (
               <>
                 <Route exact path="/" element={<MainPage />} />
+                <Route path="/course-form" element={<CourseForm />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </>
             ) : (
