@@ -1,12 +1,17 @@
 .landing_page_holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--secondary-color);
-  width: 100%;
+  width: 100vw;
   min-height: 100vh;
   box-sizing: border-box;
+
 }
 
 @media screen and (max-width: 767px) {

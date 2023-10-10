@@ -10,7 +10,6 @@ import MainPage from './components/MainPage';
 import LandingPage from './components/landing_page';
 import Login from './components/auth/login';
 import Signup from './components/auth/signup';
-import Home from './components/home';
 import ReservationsPage from './components/reservations';
 import NewReservation from './components/newReservation';
 
