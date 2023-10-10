@@ -1,23 +1,19 @@
 // index.js
 
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { createRoot } from 'react-dom'; // Updated import
-import App from './App';
-import reportWebVitals from './reportWebVitals';
 import store from './app/store';
+import App from './App';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-const root = createRoot(document.getElementById('root')); // Updated usage
+const root = ReactDOM.createRoot(document.getElementById('root')); // Updated usage
 
 root.render(
-  <Provider store={store}>
-    <Router>
+  <React.StrictMode>
+    <Provider store={store}>
       <App />
-    </Router>
-  </Provider>,
+    </Provider>
+  </React.StrictMode>,
 );
-
-reportWebVitals();

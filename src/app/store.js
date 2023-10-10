@@ -1,11 +1,13 @@
-// app/store.js
-
 import { configureStore } from '@reduxjs/toolkit';
-import courseReducer from './features/courseSlice'; // Import the course slice
+import userReducer from './features/users/userSlice';
+import mainPageReducer from './features/mainPageSlice';
+import courseReducer from './features/courseSlice';
 
 const store = configureStore({
   reducer: {
-    course: courseReducer, // Add the course slice to the store
+    user: userReducer,
+    mainPage: mainPageReducer,
+    course: courseReducer,
   },
 });
 

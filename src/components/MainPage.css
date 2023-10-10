@@ -1,0 +1,38 @@
+/* Add this CSS to your MainPage.css file or in a style block */
+.slider-container {
+  position: relative;
+}
+
+/* Style for previous button */
+.slick-prev {
+  position: absolute;
+  top: 50%;
+  left: -20px; /* Adjust the distance from the left border */
+  transform: translateY(-50%);
+  z-index: 1; /* Ensure it's above the slides */
+
+  /* Additional styling for the button, e.g., background color, etc. */
+}
+
+/* Style for next button */
+.slick-next {
+  position: absolute;
+  top: 50%;
+  right: -20px; /* Adjust the distance from the right border */
+  transform: translateY(-50%);
+  z-index: 1; /* Ensure it's above the slides */
+
+  /* Additional styling for the button, e.g., background color, etc. */
+}
+
+/* MainPage.css */
+.circular-frame {
+  position: absolute;
+  background-color: #f0f4f8; /* Light background color with some transparency */
+  border-radius: 50%; /* Make it circular */
+  width: 60%; /* Adjust the width as needed */
+  height: 60%; /* Adjust the height as needed */
+  top: 5%; /* Position it within the image */
+  left: 20%; /* Position it within the image */
+  z-index: -1; /* Place it behind other content */
+}
