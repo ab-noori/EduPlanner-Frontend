@@ -11,6 +11,8 @@ import LandingPage from './components/landing_page';
 import Login from './components/auth/login';
 import Signup from './components/auth/signup';
 import CourseForm from './components/course/CourseForm';
+import CourseList from './components/CourseList';
+import CourseDetail from './components/CourseDetail';
 
 function App() {
   const status = sessionStorage.getItem('status') || sessionStorage.setItem('status', 'false');
@@ -24,6 +26,8 @@ function App() {
               <>
                 <Route exact path="/" element={<MainPage />} />
                 <Route path="/course-form" element={<CourseForm />} />
+                <Route path="/courses/:id" element={<CourseDetail />} />
+                <Route path="/courses" element={<CourseList />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </>
             ) : (
