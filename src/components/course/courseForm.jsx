@@ -2,11 +2,13 @@
 
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { createCourse } from '../../app/features/courses/courseFormSlice';
 import './CourseForm.css';
 
 const CourseForm = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [courseData, setCourseData] = useState({
     name: '',
@@ -37,13 +39,10 @@ const CourseForm = () => {
 
     dispatch(createCourse(courseData))
       .then(() => {
-        // Handle success (e.g., show a success message or redirect)
+        navigate('/');
       })
       .catch((error) => {
-        // Handle error (e.g., show an error message)
-
-        // eslint-disable-next-line
-        console.error('Error creating course:', error.message);
+        throw new Error('Error creating course:', error.message);
       });
   };
 
