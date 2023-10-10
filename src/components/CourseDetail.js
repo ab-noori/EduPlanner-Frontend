@@ -10,10 +10,12 @@ const CourseDetail = () => {
     fetch(`http://127.0.0.1:3000/api/courses/${id}`)
       .then((response) => response.json())
       .then((data) => setCourse(data))
+      // eslint-disable-next-line
       .catch((error) => console.error('Error fetching course:', error));
   }, [id]);
 
   const handleReserveClick = () => {
+    // eslint-disable-next-line
     console.log(`Course ${course.name} reserved!`);
     // Implement your reservation logic here
   };
