@@ -6,11 +6,11 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
+import CourseForm from './components/course/CourseForm';
 import MainPage from './components/main_page/MainPage';
 import LandingPage from './components/landing_page';
 import Login from './components/auth/login';
 import Signup from './components/auth/signup';
-import CourseForm from './components/course/CourseForm';
 import CourseList from './components/CourseList';
 import CourseDetail from './components/CourseDetail';
 
