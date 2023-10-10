@@ -10,6 +10,7 @@ import Login from './components/auth/login';
 import Signup from './components/auth/signup';
 import Home from './components/home';
 import ReservationsPage from './components/reservations';
+import NewReservation from './components/newReservation';
 
 function App() {
   const status = sessionStorage.getItem('status') || sessionStorage.setItem('status', 'false');
@@ -22,6 +23,7 @@ function App() {
             <>
               <Route path="home" element={<Home />} />
               <Route path="myReservations" element={<ReservationsPage />} />
+              <Route path="newReservation" element={<NewReservation />} />
               <Route path="*" element={<Navigate to="home" replace />} />
             </>
           ) : (

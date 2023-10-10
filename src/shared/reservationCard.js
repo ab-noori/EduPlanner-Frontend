@@ -1,30 +1,30 @@
 import PropTypes from 'prop-types';
 
 function ReservationCard({ reservation }) {
-  const { city = 'Unknown City', date = 'Unknown Date', course = 'Unknown Course' } = reservation;
+  const { date = 'Unknown Date', course = 'Unknown Course' } = reservation;
   const shortDesc = course.description.slice(0, 200);
   return (
-    <div className="ClassHolder">
+    <>
       <div className="ReservationhoverCard" />
       <img src={course.image} alt="ReservationView" className="ReservationCourseImageView" />
-      <section className="ReservationCourseInfo">
-        <span className="RCourseName">{course.name}</span>
-        <p className="RCourseShortDescription">
-          {shortDesc}
-          ...
-        </p>
+      <section className="RInfoHolder">
+        <section className="ReservationCourseInfo">
+          <span className="RCourseName">{course.name}</span>
+          <p className="RCourseShortDescription">
+            {shortDesc}
+            ...
+          </p>
+        </section>
+        <section className="RCourseOtherInfo">
+          <span className="ReservedCourseDate">
+            starts On:
+            <b className="RBold">
+              {date}
+            </b>
+          </span>
+        </section>
       </section>
-      <section className="RCourseOtherInfo">
-        <span className="ReservedCourseDate">
-          starts On:
-          {date}
-        </span>
-        <span className="CourseLocation">
-          reserved from:
-          {city}
-        </span>
-      </section>
-    </div>
+    </>
   );
 }
 

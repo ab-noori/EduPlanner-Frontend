@@ -36,7 +36,6 @@ function LoadingModal() {
           visible
         />
       </div>
-
       <div style={ModalCompBackground} />
     </>
   );

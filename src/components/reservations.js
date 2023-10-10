@@ -9,8 +9,6 @@ function ReservationsPage() {
   const dispatch = useDispatch();
   const status = useSelector((state) => state.reservations.status);
   const allReservations = useSelector((state) => state.reservations.reservations);
-  const userInfo = JSON.parse(sessionStorage.getItem('logged_user'));
-  const userName = userInfo.name;
 
   useEffect(() => {
     dispatch(retrieveReservs());
@@ -28,15 +26,16 @@ function ReservationsPage() {
       { allReservations !== null ? (
         <div className="reservations_holder">
           <h1 className="reservationsHeader">Reservations Page</h1>
-          <span className="userReservNotice">
-            {userName}
-            &apos;s reservation
+          <span className="ReservationsNotice">
+            Your Course reservations
           </span>
-          {allReservations.map((reservation) => (
-            <>
-              <ReservationCard reservation={reservation} key={reservation.id} />
-            </>
-          ))}
+          <div className="RCardsHolder">
+            {allReservations.map((reservation) => (
+              <div className="RCard" key={reservation.id}>
+                <ReservationCard reservation={reservation} />
+              </div>
+            ))}
+          </div>
         </div>
       ) : null}
     </>

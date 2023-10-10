@@ -15,6 +15,17 @@ export const retrieveReservs = createAsyncThunk('reservations/retrieveReservs', 
   return response || null;
 });
 
+export const createReservation = createAsyncThunk('reservations/createReservation', async (reservationParams) => {
+  const reqBody = {
+    reservation: {
+      ...reservationParams,
+    },
+  };
+  const request = await axios.post('http://localhost:3000/api/reservations', reqBody);
+  const response = await request.data;
+  return response || null;
+});
+
 const reservationsSlice = createSlice({
   name: 'reservations',
   initialState,
@@ -33,6 +44,18 @@ const reservationsSlice = createSlice({
       .addCase(retrieveReservs.rejected, (state, action) => {
         state.status = 'failed';
         state.error = action.error.message;
+      })
+      .addCase(createReservation.pending, (state) => {
+        state.status = 'loading';
+        state.error = null;
+      })
+      .addCase(createReservation.rejected, (state, action) => {
+        state.status = 'failed';
+        state.error = action.error.message;
+      })
+      .addCase(createReservation.fulfilled, (state, action) => {
+        state.status = 'completed';
+        state.creationStatus = action.payload;
       });
   },
 });
