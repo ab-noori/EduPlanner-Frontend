@@ -14,7 +14,7 @@ export const createCourse = createAsyncThunk('courseForm/create', async (courseD
   formData.append('course[startDate]', courseData.startDate);
   formData.append('course[image]', courseData.image);
 
-  const response = await fetch('/api/courses', {
+  const response = await fetch('http://localhost:3000/api/courses', {
     method: 'POST',
     body: formData,
   });
