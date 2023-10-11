@@ -10,7 +10,7 @@ import MainPage from './components/main_page/MainPage';
 import LandingPage from './components/landing_page';
 import Login from './components/auth/login';
 import Signup from './components/auth/signup';
-import CourseForm from './components/course/CourseForm';
+import CourseForm from './components/course/courseForm';
 
 function App() {
   const status = sessionStorage.getItem('status') || sessionStorage.setItem('status', 'false');
