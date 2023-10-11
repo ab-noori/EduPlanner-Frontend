@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Slider from 'react-slick';
-import { fetchMainPage, selectMainPage } from '../app/features/mainPageSlice';
+import { fetchMainPage, selectMainPage } from '../../app/features/main_page/mainPageSlice';
 import Sidebar from './Sidebar';
 import Arrow from './Arrow';
 import 'slick-carousel/slick/slick.css';
@@ -20,7 +20,7 @@ const MainPage = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: courses.length < 3 ? courses.length : 3,
     slidesToScroll: 1,
     nextArrow: <Arrow direction="next" />,
     prevArrow: <Arrow direction="prev" />,
@@ -80,10 +80,10 @@ const MainPage = () => {
                       <div className="circular-frame" />
                       <div
                         className="img-fluid m-3"
-                        style={{ maxHeight: '200px' }}
+                        style={{ height: '180px', width: '180px' }}
                       >
                         <img
-                          src={course.image}
+                          src={course.image_url}
                           alt={course.name}
                           className="img-fluid h-100 w-100"
                         />

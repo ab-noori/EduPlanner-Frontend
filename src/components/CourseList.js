@@ -13,6 +13,7 @@ const CourseList = () => {
       .then((data) => {
         dispatch(setCourses(data));
       })
+      // eslint-disable-next-line
       .catch((error) => console.error('Error fetching courses:', error));
   }, [dispatch]);
 
