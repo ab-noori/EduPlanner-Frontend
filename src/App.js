@@ -6,7 +6,7 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
-import MainPage from './components/MainPage';
+import MainPage from './components/main_page/MainPage';
 import LandingPage from './components/landing_page';
 import Login from './components/auth/login';
 import Signup from './components/auth/signup';
@@ -14,6 +14,7 @@ import ReservationsPage from './components/reservations';
 import NewReservation from './components/newReservation';
 // import CourseList from './components/CourseList';
 import CourseDetail from './components/CourseDetail';
+import CourseForm from './components/course/courseForm';
 
 function App() {
   const status = sessionStorage.getItem('status') || sessionStorage.setItem('status', 'false');
@@ -26,11 +27,10 @@ function App() {
             {status === 'true' ? (
               <>
                 <Route exact path="/" element={<MainPage />} />
+                <Route path="/course-form" element={<CourseForm />} />
                 <Route path="my_reservations" element={<ReservationsPage />} />
-                <Route path="new_reservation/:paramId" element={<NewReservation />} />
                 <Route path="new_reservation" element={<NewReservation />} />
                 <Route path="/courses/:id" element={<CourseDetail />} />
-                {/* <Route path="/courses" element={<CourseList />} /> */}
                 <Route path="*" element={<Navigate to="/" replace />} />
               </>
             ) : (
