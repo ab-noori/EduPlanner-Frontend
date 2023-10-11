@@ -8,7 +8,7 @@ function ReservationCard({ reservation }) {
       <a href={`/courses/${course.id}`}>
         <div className="ReservationhoverCard" />
       </a>
-      <img src={course.image} alt="ReservationView" className="ReservationCourseImageView" />
+      <img src={course.image_url} alt={course.name} className="ReservationCourseImageView" />
       <section className="RInfoHolder">
         <section className="ReservationCourseInfo">
           <span className="RCourseName">{course.name}</span>

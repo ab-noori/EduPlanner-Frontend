@@ -465,8 +465,9 @@
 
 .RCard {
   position: relative;
-  min-height: 200px;
+  max-height: 400px;
   overflow-x: hidden;
+  overflow-y: hidden;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -493,8 +494,17 @@
 
 .ReservationCourseImageView {
   height: 50%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 10px;
+  background-color: white;
+}
+
+.RInfoHolder {
+  display: flex;
+  flex-direction: column;
+  column-gap: 5px;
+  justify-content: center;
+  width: 100%;
 }
 
 .ReservationCourseInfo {
@@ -511,10 +521,9 @@
   font-family: 'Gabarito', cursive;
   font-weight: 600;
   font-size: 1rem;
-}
-
-.RCourseOtherInfo {
   margin-top: 10px;
+  height: 100px;
+  overflow-y: hidden;
 }
 
 .ReservedCourseDate {

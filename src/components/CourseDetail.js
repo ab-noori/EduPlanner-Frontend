@@ -53,7 +53,7 @@ const CourseDetail = () => {
           <button type="button" className="btn btn-success custom-button" onClick={handleReserveClick}>Reserve</button>
         </div>
         <div className="col-md-6 order-md-1 d-flex justify-content-center align-items-center">
-          <img src={course.image} alt={course.name} className="img-fluid" />
+          <img src={course.image_url} alt={course.name} className="img-fluid" />
         </div>
       </div>
     </div>
