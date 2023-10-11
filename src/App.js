@@ -12,7 +12,7 @@ import Login from './components/auth/login';
 import Signup from './components/auth/signup';
 import ReservationsPage from './components/reservations';
 import NewReservation from './components/newReservation';
-import CourseList from './components/CourseList';
+// import CourseList from './components/CourseList';
 import CourseDetail from './components/CourseDetail';
 
 function App() {
@@ -27,9 +27,10 @@ function App() {
               <>
                 <Route exact path="/" element={<MainPage />} />
                 <Route path="my_reservations" element={<ReservationsPage />} />
+                <Route path="new_reservation/:paramId" element={<NewReservation />} />
                 <Route path="new_reservation" element={<NewReservation />} />
                 <Route path="/courses/:id" element={<CourseDetail />} />
-                <Route path="/courses" element={<CourseList />} />
+                {/* <Route path="/courses" element={<CourseList />} /> */}
                 <Route path="*" element={<Navigate to="/" replace />} />
               </>
             ) : (

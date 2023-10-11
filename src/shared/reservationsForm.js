@@ -6,9 +6,10 @@ import LoadingModal from './loading';
 import MessageModal from './messageModal';
 
 function ReservationForm() {
-  const [courseId, setCourseId] = useState('');
+  const reservableCourse = JSON.parse(sessionStorage.getItem('reservableCourseInfo')) || null;
+  const [courseId, setCourseId] = useState(reservableCourse ? reservableCourse.id : '');
   const [cityInput, setCityInput] = useState('');
-  const [dateInput, setDateInput] = useState(null);
+  const [dateInput, setDateInput] = useState(reservableCourse ? reservableCourse.startDate : null);
   const [newReservStatus, setNewReserveStatus] = useState('not Active');
   const [creationStatus, setCreationStatus] = useState('no status');
   const user = JSON.parse(sessionStorage.getItem('logged_user'));
@@ -32,9 +33,13 @@ function ReservationForm() {
   };
 
   const handleCourseSelection = (e) => {
+    sessionStorage.removeItem('reservableCourseInfo');
+
     const selectedCourseId = e.target.value;
-    setCourseId(selectedCourseId);
-    courseDependacies(selectedCourseId);
+    if (selectedCourseId) {
+      setCourseId(selectedCourseId);
+      courseDependacies(selectedCourseId);
+    }
   };
 
   const newReservationValidation = (crsId, date) => {
@@ -85,6 +90,7 @@ function ReservationForm() {
     setCityInput('');
     setCourseId('');
     setDateInput(null);
+    sessionStorage.removeItem('reservableCourseInfo');
   };
 
   return (
@@ -102,7 +108,7 @@ function ReservationForm() {
                 onChange={(e) => {
                   handleCourseSelection(e);
                 }}
-                defaultValue="N/A"
+                value={reservableCourse ? courseId : courseId || 'N/A'}
               >
                 <option value="N/A" disabled>Choose a Course..</option>
                 { Allcourses ? Allcourses.map((course) => (
@@ -116,7 +122,7 @@ function ReservationForm() {
               <input type="text" value={cityInput} name="city" placeholder="where are you from?" className="reservationInput" onChange={(e) => setCityInput(e.target.value)} />
             </div>
             <div className="RFormInputHolder Date_R">
-              <input type="text" disabled value={dateInput || 'Course will Begin..'} className="reservationInput RFormRes" title="This is the Date When the course will begin, So set the calendar to not forget your reserved course When it takes place" />
+              <input type="text" disabled value={reservableCourse ? dateInput : dateInput || 'Course will Begin..'} className="reservationInput RFormRes" title="This is the Date When the course will begin, So set the calendar to not forget your reserved course When it takes place" />
             </div>
           </section>
           <section className="RButtonHolder">

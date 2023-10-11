@@ -5,7 +5,9 @@ function ReservationCard({ reservation }) {
   const shortDesc = course.description.slice(0, 200);
   return (
     <>
-      <div className="ReservationhoverCard" />
+      <a href={`/courses/${course.id}`}>
+        <div className="ReservationhoverCard" />
+      </a>
       <img src={course.image} alt="ReservationView" className="ReservationCourseImageView" />
       <section className="RInfoHolder">
         <section className="ReservationCourseInfo">
