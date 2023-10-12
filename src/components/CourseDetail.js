@@ -9,7 +9,7 @@ const CourseDetail = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:3000/api/courses/${id}`)
+    fetch(`https://edu-planner-backend.onrender.com/api/courses/${id}`)
       .then((response) => response.json())
       .then((data) => setCourse(data));
   }, [id]);
