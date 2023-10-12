@@ -10,10 +10,13 @@ import MainPage from './components/main_page/MainPage';
 import LandingPage from './components/landing_page';
 import Login from './components/auth/login';
 import Signup from './components/auth/signup';
-import CourseList from './components/CourseList';
+import ReservationsPage from './components/reservations';
+import NewReservation from './components/newReservation';
 import CourseDetail from './components/CourseDetail';
+import CourseList from './components/CourseList';
 import CourseForm from './components/course/courseForm';
 import DeleteCoursePage from './components/DeleteCoursePage';
+import Logout from './components/logout';
 
 function App() {
   const status = sessionStorage.getItem('status') || sessionStorage.setItem('status', 'false');
@@ -27,6 +30,9 @@ function App() {
               <>
                 <Route exact path="/" element={<MainPage />} />
                 <Route path="/course-form" element={<CourseForm />} />
+                <Route path="my_reservations" element={<ReservationsPage />} />
+                <Route path="new_reservation" element={<NewReservation />} />
+                <Route exact path="/logout" element={<Logout />} />
                 <Route path="/courses/:id" element={<CourseDetail />} />
                 <Route path="/courses" element={<CourseList />} />
                 <Route path="/delete-course" element={<DeleteCoursePage />} />
