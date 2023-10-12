@@ -1,18 +1,18 @@
-import { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import LoadingModal from '../shared/loading';
 
 function Logout() {
   const [loggedOff, setLoggedOff] = useState(false);
-  // const navigate = useNavigate();
-  setLoggedOff(true);
-  setTimeout(() => {
-    setLoggedOff(false);
-    sessionStorage.removeItem('logged_user');
-    sessionStorage.setItem('status', 'false');
-    window.location.reload();
-    // navigate('/');
-  }, 2000);
+
+  useEffect(() => {
+    setLoggedOff(true);
+    setTimeout(() => {
+      setLoggedOff(false);
+      sessionStorage.removeItem('logged_user');
+      sessionStorage.setItem('status', 'false');
+      window.location.reload();
+    }, 2000);
+  }, [setLoggedOff]);
 
   return (
     <div>

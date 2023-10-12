@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCourses, setCourses } from '../app/features/courseSlice';
-import './DeleteCoursePage.css';
+import '../styles/DeleteCoursePage.css';
 
 const DeleteCoursePage = () => {
   const dispatch = useDispatch();
@@ -12,30 +12,24 @@ const DeleteCoursePage = () => {
       .then((response) => response.json())
       .then((data) => {
         dispatch(setCourses(data));
-      })
-      .catch((error) => console.error('Error fetching courses:', error));
+      });
   }, [dispatch]);
 
   const handleDelete = async (courseId) => {
-    try {
-      const response = await fetch(`http://127.0.0.1:3000/api/courses/${courseId}`, {
-        method: 'DELETE',
-      });
+    const response = await fetch(`http://127.0.0.1:3000/api/courses/${courseId}`, {
+      method: 'DELETE',
+    });
 
-      if (!response.ok) {
-        throw new Error('Failed to delete course');
-      }
-
-      // Fetch the updated courses after successful deletion
-      fetch('http://127.0.0.1:3000/api/courses')
-        .then((response) => response.json())
-        .then((data) => {
-          dispatch(setCourses(data));
-        })
-        .catch((error) => console.error('Error fetching courses:', error));
-    } catch (error) {
-      console.error('Error deleting course:', error);
+    if (!response.ok) {
+      throw new Error('Failed to delete course');
     }
+
+    // Fetch the updated courses after successful deletion
+    fetch('http://127.0.0.1:3000/api/courses')
+      .then((response) => response.json())
+      .then((data) => {
+        dispatch(setCourses(data));
+      });
   };
 
   return (
