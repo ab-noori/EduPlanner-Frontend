@@ -13,6 +13,7 @@ import Signup from './components/auth/signup';
 import CourseList from './components/CourseList';
 import CourseDetail from './components/CourseDetail';
 import CourseForm from './components/course/courseForm';
+import DeleteCoursePage from './components/DeleteCoursePage';
 
 function App() {
   const status = sessionStorage.getItem('status') || sessionStorage.setItem('status', 'false');
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/course-form" element={<CourseForm />} />
                 <Route path="/courses/:id" element={<CourseDetail />} />
                 <Route path="/courses" element={<CourseList />} />
+                <Route path="/delete-course" element={<DeleteCoursePage />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </>
             ) : (
