@@ -7,6 +7,7 @@ import Arrow from './Arrow';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './MainPage.css';
+import LoadingModal from '../../shared/loading';
 
 const MainPage = () => {
   const dispatch = useDispatch();
@@ -61,7 +62,7 @@ const MainPage = () => {
           <h1 className="fw-bold">New Courses</h1>
           <h6 className="text-secondary">Please select your favorit class</h6>
         </div>
-        {loading && <p className="text-center">Loading...</p>}
+        {loading && <LoadingModal />}
         {error && (
           <p className="alert alert-danger">
             Error:
@@ -82,11 +83,13 @@ const MainPage = () => {
                         className="img-fluid m-3"
                         style={{ height: '180px', width: '180px' }}
                       >
-                        <img
-                          src={course.image_url}
-                          alt={course.name}
-                          className="img-fluid h-100 w-100"
-                        />
+                        <a href={`/courses/${course.id}`}>
+                          <img
+                            src={course.image_url}
+                            alt={course.name}
+                            className="img-fluid h-100 w-100"
+                          />
+                        </a>
                       </div>
                     </div>
                     <div className="d-flex flex-column align-items-center justify-content-center">
