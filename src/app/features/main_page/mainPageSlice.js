@@ -4,7 +4,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchMainPage = createAsyncThunk('mainPage/fetch', async () => {
   try {
-    const response = await fetch('http://localhost:3000/api/courses');
+    const response = await fetch('https://edu-planner-backend.onrender.com/api/courses');
     if (!response.ok) {
       throw new Error('Network response was not ok');
     }

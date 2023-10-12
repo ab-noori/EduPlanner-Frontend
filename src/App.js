@@ -14,7 +14,7 @@ import Signup from './components/auth/signup';
 import ReservationsPage from './components/reservations';
 import NewReservation from './components/newReservation';
 import CourseDetail from './components/CourseDetail';
-import CourseForm from './components/course/CourseForm.jsx';
+import CourseForm from './components/course/courseForm';
 import DeleteCoursePage from './components/DeleteCoursePage';
 import Logout from './components/logout';
 
