@@ -1,8 +1,10 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 
-function ReservationCard({ reservation }) {
-  const { date = 'Unknown Date', course = 'Unknown Course' } = reservation;
+const ReservationCard = ({ reservation }) => {
+  const { date = 'Unknown Date', course = { description: 'Unknown Course' } } = reservation;
   const shortDesc = course.description.slice(0, 200);
+
   return (
     <>
       <a href={`/courses/${course.id}`}>
@@ -28,7 +30,7 @@ function ReservationCard({ reservation }) {
       </section>
     </>
   );
-}
+};
 
 ReservationCard.propTypes = {
   reservation: PropTypes.shape({

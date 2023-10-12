@@ -18,7 +18,7 @@ import CourseForm from './components/course/courseForm';
 import DeleteCoursePage from './components/DeleteCoursePage';
 import Logout from './components/logout';
 
-function App() {
+const App = () => {
   const status = sessionStorage.getItem('status') || sessionStorage.setItem('status', 'false');
 
   return (
@@ -51,6 +51,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;

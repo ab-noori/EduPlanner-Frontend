@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { retrieveCourses } from '../app/features/courses/coursesSlice';
 import { retrieveReservs, createReservation } from '../app/features/reservations/reservationsSlice';
 import LoadingModal from './loading';
 import MessageModal from './messageModal';
 
-function ReservationForm() {
+const ReservationForm = () => {
   const reservableCourse = JSON.parse(sessionStorage.getItem('reservableCourseInfo')) || null;
   const [courseId, setCourseId] = useState(reservableCourse ? reservableCourse.id : '');
   const [cityInput, setCityInput] = useState('');
@@ -62,7 +62,6 @@ function ReservationForm() {
     e.preventDefault();
     setNewReserveStatus('Active');
 
-    // assembling the new reservation
     const newReservation = {
       user_id: user.id,
       course_id: courseId,
@@ -70,12 +69,10 @@ function ReservationForm() {
       date: dateInput,
     };
 
-    // validating our new reservation
     const { date } = newReservation;
     const crsId = newReservation.course_id;
     validationStatus = newReservationValidation(crsId, date);
 
-    // If new reservation indeed create new reservation
     if (validationStatus) {
       dispatch(createReservation(newReservation));
       userWarning();
@@ -132,6 +129,6 @@ function ReservationForm() {
       </form>
     </>
   );
-}
+};
 
 export default ReservationForm;

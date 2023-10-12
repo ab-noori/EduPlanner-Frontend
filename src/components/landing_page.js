@@ -6,7 +6,7 @@ import displayImage1 from '../assets/images/image_display_1.jpg';
 import displayImage2 from '../assets/images/image_display_2.jpeg';
 import displayImage3 from '../assets/images/image_display_3.jpg';
 
-function LandingPage() {
+const LandingPage = () => {
   const navigate = useNavigate();
   const landingViews = [
     {
@@ -48,6 +48,6 @@ function LandingPage() {
       </section>
     </div>
   );
-}
+};
 
 export default LandingPage;

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import LoadingModal from '../shared/loading';
 
-function Logout() {
+const Logout = () => {
   const [loggedOff, setLoggedOff] = useState(false);
 
   useEffect(() => {
@@ -19,6 +19,6 @@ function Logout() {
       {loggedOff && <LoadingModal />}
     </div>
   );
-}
+};
 
 export default Logout;
