@@ -13,7 +13,9 @@ import Signup from './components/auth/signup';
 import ReservationsPage from './components/reservations';
 import NewReservation from './components/newReservation';
 import CourseDetail from './components/CourseDetail';
+import CourseList from './components/CourseList';
 import CourseForm from './components/course/courseForm';
+import DeleteCoursePage from './components/DeleteCoursePage';
 import Logout from './components/logout';
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
                 <Route path="new_reservation" element={<NewReservation />} />
                 <Route exact path="/logout" element={<Logout />} />
                 <Route path="/courses/:id" element={<CourseDetail />} />
+                <Route path="/courses" element={<CourseList />} />
+                <Route path="/delete-course" element={<DeleteCoursePage />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </>
             ) : (
