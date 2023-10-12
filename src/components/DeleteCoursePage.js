@@ -8,7 +8,7 @@ const DeleteCoursePage = () => {
   const courses = useSelector(selectCourses);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:3000/api/courses')
+    fetch('https://edu-planner-backend.onrender.com/api/courses')
       .then((response) => response.json())
       .then((data) => {
         dispatch(setCourses(data));
@@ -16,7 +16,7 @@ const DeleteCoursePage = () => {
   }, [dispatch]);
 
   const handleDelete = async (courseId) => {
-    const response = await fetch(`http://127.0.0.1:3000/api/courses/${courseId}`, {
+    const response = await fetch(`https://edu-planner-backend.onrender.com/api/courses/${courseId}`, {
       method: 'DELETE',
     });
 
@@ -25,7 +25,7 @@ const DeleteCoursePage = () => {
     }
 
     // Fetch the updated courses after successful deletion
-    fetch('http://127.0.0.1:3000/api/courses')
+    fetch('https://edu-planner-backend.onrender.com/api/courses')
       .then((response) => response.json())
       .then((data) => {
         dispatch(setCourses(data));
