@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Slider from 'react-slick';
 import { fetchMainPage, selectMainPage } from '../../app/features/main_page/mainPageSlice';
-import Sidebar from './Sidebar';
 import Arrow from './Arrow';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -54,56 +53,53 @@ const MainPage = () => {
   };
 
   return (
-    <div className="row">
-      <Sidebar />
-      <main className="col-md-9 ms-sm-auto col-lg-10 mt-5 position-relative" style={{ minHeight: '100vh' }}>
-        <div className="text-center mb-5">
-          <h1 className="fw-bold">New Courses</h1>
-          <h6 className="text-secondary">Please select your favorit class</h6>
-        </div>
-        {loading && <p className="text-center">Loading...</p>}
-        {error && (
-          <p className="alert alert-danger">
-            Error:
-            {' '}
-            {error}
-          </p>
-        )}
-        {courses.length > 0 && (
-          <div className="slider-container">
-            {/* eslint-disable react/jsx-props-no-spreading */}
-            <Slider {...settings}>
-              {courses.map((course) => (
-                <div key={course.id} className="col">
-                  <div className="row position-relative">
-                    <div className="d-flex flex-column align-items-center justify-content-center">
-                      <div className="circular-frame" />
-                      <div
-                        className="img-fluid m-3"
-                        style={{ height: '180px', width: '180px' }}
-                      >
-                        <img
-                          src={course.image_url}
-                          alt={course.name}
-                          className="img-fluid h-100 w-100"
-                        />
-                      </div>
+    <main className="col-md-9 ms-sm-auto col-lg-10 mt-5 position-relative" style={{ minHeight: '90vh' }}>
+      <div className="text-center mb-5">
+        <h1 className="fw-bold">New Courses</h1>
+        <h6 className="text-secondary">Please select your favorit class</h6>
+      </div>
+      {loading && <p className="text-center">Loading...</p>}
+      {error && (
+        <p className="alert alert-danger">
+          Error:
+          {' '}
+          {error}
+        </p>
+      )}
+      {courses.length > 0 && (
+        <div className="slider-container">
+          {/* eslint-disable react/jsx-props-no-spreading */}
+          <Slider {...settings}>
+            {courses.map((course) => (
+              <div key={course.id} className="col">
+                <div className="row position-relative">
+                  <div className="d-flex flex-column align-items-center justify-content-center">
+                    <div className="circular-frame" />
+                    <div
+                      className="img-fluid m-3"
+                      style={{ height: '180px', width: '180px' }}
+                    >
+                      <img
+                        src={course.image_url}
+                        alt={course.name}
+                        className="img-fluid h-100 w-100"
+                      />
                     </div>
-                    <div className="d-flex flex-column align-items-center justify-content-center">
-                      <div className="text-center">
-                        <h5 className="m-4">{course.name}</h5>
-                        <p className="text-secondary">{course.description}</p>
-                      </div>
+                  </div>
+                  <div className="d-flex flex-column align-items-center justify-content-center">
+                    <div className="text-center">
+                      <h5 className="m-4">{course.name}</h5>
+                      <p className="text-secondary">{course.description}</p>
                     </div>
                   </div>
                 </div>
-              ))}
-            </Slider>
-            {/* eslint-enable react/jsx-props-no-spreading */}
-          </div>
-        )}
-      </main>
-    </div>
+              </div>
+            ))}
+          </Slider>
+          {/* eslint-enable react/jsx-props-no-spreading */}
+        </div>
+      )}
+    </main>
   );
 };
 
