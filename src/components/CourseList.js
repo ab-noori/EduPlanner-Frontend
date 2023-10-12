@@ -23,8 +23,8 @@ const CourseList = () => {
       <ul>
         {courses.map((course) => (
           <li key={course.id}>
+            <img src={course.image_url} alt={course.name} className="img-fluid" />
             <h2>{course.name}</h2>
-
             <Link to={`/courses/${course.id}`}>
               <button type="button">View Details</button>
             </Link>
