@@ -8,7 +8,7 @@
     min-height: 100vh;
     box-sizing: border-box;
   }
-  
+
   .CourseDetailsPageDivider {
     width: 95%;
     height: 100%;
@@ -19,14 +19,14 @@
     align-items: center;
     column-gap: 10px;
   }
-  
+
   .CourseDetailsImageHolder {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+
   .CourseDetailsImage {
     max-width: 500px;
     max-height: 400px;
@@ -36,9 +36,9 @@
     border-radius: 7px;
     object-fit: contain;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #fff;
   }
-  
+
   .BlurImageDetails {
     position: fixed;
     right: 0;
@@ -51,19 +51,19 @@
     background-color: #006effb2;
     box-sizing: border-box;
     display: flex;
-    justify-content:  flex-end;
+    justify-content: flex-end;
     align-self: flex-end;
     overflow-y: hidden;
     overflow-x: hidden;
   }
-  
+
   .BlurImage {
     object-fit: cover;
     position: relative;
     top: 30%;
     left: 30%;
   }
-  
+
   .CourseDetailsInfoHolder {
     width: 85%;
     padding-top: 5px;
@@ -71,7 +71,7 @@
     flex-direction: column;
     align-items: center;
   }
-  
+
   .courseDetailsName {
     font-family: 'Gabarito', cursive;
     font-weight: bold;
@@ -84,21 +84,21 @@
     text-align: center;
     margin-top: 20px;
   }
-  
+
   .CourseDetailsTextInfo {
     background-color: white;
     border-radius: 7px;
     border: 2px solid black;
     padding: 15px;
   }
-  
+
   .courseDetailsParagragh > b {
     font-family: 'Gabarito', cursive;
     font-weight: bolder;
     font-size: 1.2rem;
     color: rgb(92, 92, 92);
   }
-  
+
   .courseDetailsParagragh > span {
     font-family: 'Gabarito', cursive;
     color: black;
@@ -107,14 +107,14 @@
     font-size: 1.2rem;
     overflow-y: scroll;
   }
-  
+
   .courseDetailsFee > b {
     font-family: 'Gabarito', cursive;
     font-weight: bolder;
     font-size: 1.3rem;
     color: rgb(92, 92, 92);
   }
-  
+
   .courseDetailsFee > span {
     font-family: 'Gabarito', cursive;
     font-weight: bolder;
@@ -122,14 +122,14 @@
     color: black;
     padding-left: 5px;
   }
-  
+
   .courseDetailsDate > b {
     font-family: 'Gabarito', cursive;
     font-weight: bolder;
     font-size: 1.2rem;
     color: rgb(92, 92, 92);
   }
-  
+
   .courseDetailsDate > span {
     padding-left: 5px;
     font-family: 'Gabarito', cursive;
@@ -137,7 +137,7 @@
     font-size: 1.3rem;
     color: black;
   }
-  
+
   .custom-button {
     margin-top: 15px;
     width: 160px;
@@ -150,7 +150,7 @@
     font-size: 1.3rem;
     margin-bottom: 30px;
   }
-  
+
   .custom-button:hover {
     background-color: #ffb400;
     color: white;
@@ -174,7 +174,7 @@
     overflow-y: hidden;
     overflow-x: hidden;
   }
-  
+
   .CourseDetailsPageDivider {
     width: 80%;
     height: 75%;
@@ -184,7 +184,7 @@
     display: flex;
     column-gap: 10px;
   }
-  
+
   .CourseDetailsImageHolder {
     width: 50%;
     display: flex;
@@ -192,7 +192,7 @@
     align-items: flex-start;
     justify-self: flex-end;
   }
-  
+
   .CourseDetailsImage {
     max-width: 500px;
     max-height: 400px;
@@ -204,9 +204,9 @@
     border-radius: 7px;
     object-fit: contain;
     padding: 20px;
-    background-color: #ffffff;
+    background-color: #fff;
   }
-  
+
   .BlurImageDetails {
     position: absolute;
     right: 0;
@@ -219,26 +219,26 @@
     background-color: #006effb2;
     box-sizing: border-box;
     display: flex;
-    justify-content:  flex-end;
+    justify-content: flex-end;
     align-self: flex-end;
     overflow-y: hidden;
     overflow-x: hidden;
   }
-  
+
   .BlurImage {
     object-fit: cover;
     position: relative;
     top: 30%;
     left: 10%;
   }
-  
+
   .CourseDetailsInfoHolder {
     width: 50%;
     padding-top: 5px;
     display: flex;
     flex-direction: column;
   }
-  
+
   .courseDetailsName {
     font-family: 'Gabarito', cursive;
     font-weight: bold;
@@ -249,21 +249,21 @@
     width: 90%;
     height: 8%;
   }
-  
+
   .CourseDetailsTextInfo {
     background-color: white;
     border-radius: 7px;
     border: 2px solid black;
     padding: 15px;
   }
-  
+
   .courseDetailsParagragh > b {
     font-family: 'Gabarito', cursive;
     font-weight: bolder;
     font-size: 1.2rem;
     color: rgb(92, 92, 92);
   }
-  
+
   .courseDetailsParagragh > span {
     font-family: 'Gabarito', cursive;
     color: black;
@@ -272,14 +272,14 @@
     font-size: 1.2rem;
     overflow-y: scroll;
   }
-  
+
   .courseDetailsFee > b {
     font-family: 'Gabarito', cursive;
     font-weight: bolder;
     font-size: 1.3rem;
     color: rgb(92, 92, 92);
   }
-  
+
   .courseDetailsFee > span {
     font-family: 'Gabarito', cursive;
     font-weight: bolder;
@@ -287,14 +287,14 @@
     color: black;
     padding-left: 5px;
   }
-  
+
   .courseDetailsDate > b {
     font-family: 'Gabarito', cursive;
     font-weight: bolder;
     font-size: 1.2rem;
     color: rgb(92, 92, 92);
   }
-  
+
   .courseDetailsDate > span {
     padding-left: 5px;
     font-family: 'Gabarito', cursive;
@@ -302,7 +302,7 @@
     font-size: 1.3rem;
     color: black;
   }
-  
+
   .custom-button {
     margin-top: 15px;
     width: 160px;
@@ -314,7 +314,7 @@
     font-family: 'Gabarito', cursive;
     font-size: 1.3rem;
   }
-  
+
   .custom-button:hover {
     background-color: #ffb400;
     color: white;
