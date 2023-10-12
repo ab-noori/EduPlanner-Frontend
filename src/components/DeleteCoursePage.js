@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCourses, setCourses } from '../app/features/courseSlice';
+import './DeleteCoursePage.css';
 
 const DeleteCoursePage = () => {
   const dispatch = useDispatch();
@@ -38,14 +39,14 @@ const DeleteCoursePage = () => {
   };
 
   return (
-    <div>
+    <div id="delete_course_container">
       <h1>Delete Course Page</h1>
-      <ul>
+      <ul className="card_container">
         {courses.map((course) => (
-          <li key={course.id}>
+          <li key={course.id} className="card">
             <img src={course.image_url} alt={course.name} className="img-fluid" />
-            <h2>{course.name}</h2>
-            <button type="button" onClick={() => handleDelete(course.id)}>Delete</button>
+            <h2 className="card_title">{course.name}</h2>
+            <button type="button" onClick={() => handleDelete(course.id)} className="delete_button">Delete</button>
           </li>
         ))}
       </ul>
