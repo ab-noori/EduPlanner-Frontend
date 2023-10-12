@@ -52,7 +52,6 @@ const Sidebar = () => {
             )}
           </button>
         </div>
-
       </nav>
       <div className="sidebar">
         <div className={`${smallNavCollapse ? 'smallNavCollapse' : ''} sidebar-container ${navCollapse ? 'navCollapse' : ''}`}>
@@ -70,17 +69,22 @@ const Sidebar = () => {
             <h5>CREATE A COURSE</h5>
           </NavLink>
 
-          <NavLink className="nav-option" to="/course-form">
+          <NavLink className="nav-option" to="/my_reservations">
             <i className="bi bi-ui-checks" />
             <h5>MY RESERVATIONS</h5>
           </NavLink>
 
-          <NavLink className="nav-option" to="/course-form">
+          <NavLink className="nav-option" to="/new_reservation">
+            <i className="bi bi-bookmark-check" />
+            <h5>RESERVE A COURSE</h5>
+          </NavLink>
+
+          <NavLink className="nav-option" to="/delete-course">
             <i className="bi bi-journal-x" />
             <h5>REMOVE A COURSE</h5>
           </NavLink>
 
-          <NavLink className="nav-option" to="/course-form">
+          <NavLink className="nav-option" to="/logout">
             <i className="bi bi-power" />
             <h5>LOG OUT</h5>
           </NavLink>

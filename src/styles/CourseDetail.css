@@ -1,0 +1,325 @@
+@media screen and (max-width: 767px) {
+  .CourseHolder {
+    background-color: #91b901d0;
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    width: 100vw;
+    min-height: 100vh;
+    box-sizing: border-box;
+  }
+
+  .CourseDetailsPageDivider {
+    width: 95%;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  .CourseDetailsImageHolder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .CourseDetailsImage {
+    max-width: 500px;
+    max-height: 400px;
+    width: 60%;
+    height: 60%;
+    border: 2px solid rgb(94, 94, 94);
+    border-radius: 7px;
+    object-fit: contain;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .BlurImageDetails {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    background-color: #006effb2;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .BlurImage {
+    object-fit: cover;
+    position: relative;
+    top: 30%;
+    left: 30%;
+  }
+
+  .CourseDetailsInfoHolder {
+    width: 85%;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .courseDetailsName {
+    font-family: 'Gabarito', cursive;
+    font-weight: bold;
+    color: black;
+    font-size: 1.7rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid black;
+    width: fit-content;
+    height: 8%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .CourseDetailsTextInfo {
+    background-color: white;
+    border-radius: 7px;
+    border: 2px solid black;
+    padding: 15px;
+  }
+
+  .courseDetailsParagragh > b {
+    font-family: 'Gabarito', cursive;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: rgb(92, 92, 92);
+  }
+
+  .courseDetailsParagragh > span {
+    font-family: 'Gabarito', cursive;
+    color: black;
+    text-decoration: none;
+    margin-left: 6px;
+    font-size: 1.2rem;
+    overflow-y: scroll;
+  }
+
+  .courseDetailsFee > b {
+    font-family: 'Gabarito', cursive;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: rgb(92, 92, 92);
+  }
+
+  .courseDetailsFee > span {
+    font-family: 'Gabarito', cursive;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: black;
+    padding-left: 5px;
+  }
+
+  .courseDetailsDate > b {
+    font-family: 'Gabarito', cursive;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: rgb(92, 92, 92);
+  }
+
+  .courseDetailsDate > span {
+    padding-left: 5px;
+    font-family: 'Gabarito', cursive;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: black;
+  }
+
+  .custom-button {
+    margin-top: 15px;
+    width: 160px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 2px 2px 5px darkgray;
+    font-family: 'Gabarito', cursive;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+
+  .custom-button:hover {
+    background-color: #ffb400;
+    color: white;
+    padding: 10px 20px;
+    border: 1px;
+    box-shadow: 2px 2px 5px black;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .CourseHolder {
+    background-color: #91b901d0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .CourseDetailsPageDivider {
+    width: 80%;
+    height: 75%;
+    margin-top: 25px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    column-gap: 10px;
+  }
+
+  .CourseDetailsImageHolder {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    justify-self: flex-end;
+  }
+
+  .CourseDetailsImage {
+    max-width: 500px;
+    max-height: 400px;
+    min-width: 280px;
+    min-height: 250px;
+    width: 60%;
+    height: 60%;
+    border: 2px solid rgb(94, 94, 94);
+    border-radius: 7px;
+    object-fit: contain;
+    padding: 20px;
+    background-color: #fff;
+  }
+
+  .BlurImageDetails {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    width: 100%;
+    height: 100%;
+    background-color: #006effb2;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .BlurImage {
+    object-fit: cover;
+    position: relative;
+    top: 30%;
+    left: 10%;
+  }
+
+  .CourseDetailsInfoHolder {
+    width: 50%;
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .courseDetailsName {
+    font-family: 'Gabarito', cursive;
+    font-weight: bold;
+    color: black;
+    font-size: 1.7rem;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid black;
+    width: 90%;
+    height: 8%;
+  }
+
+  .CourseDetailsTextInfo {
+    background-color: white;
+    border-radius: 7px;
+    border: 2px solid black;
+    padding: 15px;
+  }
+
+  .courseDetailsParagragh > b {
+    font-family: 'Gabarito', cursive;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: rgb(92, 92, 92);
+  }
+
+  .courseDetailsParagragh > span {
+    font-family: 'Gabarito', cursive;
+    color: black;
+    text-decoration: none;
+    margin-left: 6px;
+    font-size: 1.2rem;
+    overflow-y: scroll;
+  }
+
+  .courseDetailsFee > b {
+    font-family: 'Gabarito', cursive;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: rgb(92, 92, 92);
+  }
+
+  .courseDetailsFee > span {
+    font-family: 'Gabarito', cursive;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: black;
+    padding-left: 5px;
+  }
+
+  .courseDetailsDate > b {
+    font-family: 'Gabarito', cursive;
+    font-weight: bolder;
+    font-size: 1.2rem;
+    color: rgb(92, 92, 92);
+  }
+
+  .courseDetailsDate > span {
+    padding-left: 5px;
+    font-family: 'Gabarito', cursive;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    color: black;
+  }
+
+  .custom-button {
+    margin-top: 15px;
+    width: 160px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2px solid black;
+    box-shadow: 2px 2px 5px darkgray;
+    font-family: 'Gabarito', cursive;
+    font-size: 1.3rem;
+  }
+
+  .custom-button:hover {
+    background-color: #ffb400;
+    color: white;
+    padding: 10px 20px;
+    border: 1px;
+    box-shadow: 2px 2px 5px black;
+  }
+}

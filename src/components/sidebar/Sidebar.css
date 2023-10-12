@@ -1,24 +1,24 @@
 /* src/components/Sidebar.css */
 .sidebar {
-  z-index: 99;
+  position: absolute;
   background-color: white;
+  z-index: 99;
 }
 
 .nav {
+  position: relative;
+}
+
+.sidebar-minimizer {
   width: 100%;
-  margin-left: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   border-right: 2px solid lightgray;
 }
 
 .small-screen-nav {
   display: none;
-}
-
-.sidebar-minimizer {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
 }
 
 .sidebar-toggle-button {
@@ -56,7 +56,6 @@
   color: white;
   width: 100%;
   height: calc(100vh);
-  margin-left: 10px;
   border-right: 2px solid lightgray;
   overflow-y: scroll;
   overflow-x: hidden;
