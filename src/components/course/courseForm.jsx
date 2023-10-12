@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { createCourse } from '../../app/features/courses/courseFormSlice';
-import './CourseForm.css';
+import './course.css';
 
 const CourseForm = () => {
   const dispatch = useDispatch();
