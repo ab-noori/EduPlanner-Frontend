@@ -6,6 +6,7 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
+import Sidebar from './components/sidebar/Sidebar';
 import MainPage from './components/main_page/MainPage';
 import LandingPage from './components/landing_page';
 import Login from './components/auth/login';
@@ -24,27 +25,28 @@ function App() {
     <div className="App">
       <div className="container-fluid">
         <Router>
-          <Routes>
-            {status === 'true' ? (
-              <>
+          {status === 'true' ? (
+            <div className="row">
+              <Sidebar />
+              <Routes>
                 <Route exact path="/" element={<MainPage />} />
                 <Route path="/course-form" element={<CourseForm />} />
-                <Route path="my_reservations" element={<ReservationsPage />} />
-                <Route path="new_reservation" element={<NewReservation />} />
+                <Route path="/my_reservations" element={<ReservationsPage />} />
+                <Route path="/new_reservation" element={<NewReservation />} />
                 <Route exact path="/logout" element={<Logout />} />
                 <Route path="/courses/:id" element={<CourseDetail />} />
                 <Route path="/delete-course" element={<DeleteCoursePage />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
-              </>
-            ) : (
-              <>
-                <Route path="/" element={<LandingPage />} />
-                <Route path="login" element={<Login />} />
-                <Route path="signup" element={<Signup />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
-              </>
-            )}
-          </Routes>
+              </Routes>
+            </div>
+          ) : (
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="login" element={<Login />} />
+              <Route path="signup" element={<Signup />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          )}
         </Router>
       </div>
     </div>

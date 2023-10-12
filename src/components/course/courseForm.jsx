@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { createCourse } from '../../app/features/courses/courseFormSlice';
-import './CourseForm.css';
+import './course.css';
 
 const CourseForm = () => {
   const dispatch = useDispatch();
@@ -47,7 +47,7 @@ const CourseForm = () => {
   };
 
   return (
-    <div className="container mt-4">
+    <main className="col-md-9 ms-sm-auto col-lg-10 mt-5 position-relative" style={{ minHeight: '90vh' }}>
       <div className="row justify-content-center">
         <div className="col-md-8">
           <div className="card form-container shadow">
@@ -125,7 +125,7 @@ const CourseForm = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

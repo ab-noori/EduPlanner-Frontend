@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Slider from 'react-slick';
 import { fetchMainPage, selectMainPage } from '../../app/features/main_page/mainPageSlice';
-import Sidebar from './Sidebar';
 import Arrow from './Arrow';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -55,8 +54,7 @@ const MainPage = () => {
   };
 
   return (
-    <div className="row">
-      <Sidebar />
+    <>
       <main className="col-md-9 ms-sm-auto col-lg-10 mt-5 position-relative" style={{ minHeight: '100vh' }}>
         <div className="text-center mb-5">
           <h1 className="fw-bold">New Courses</h1>
@@ -106,7 +104,7 @@ const MainPage = () => {
           </div>
         )}
       </main>
-    </div>
+    </>
   );
 };
 
