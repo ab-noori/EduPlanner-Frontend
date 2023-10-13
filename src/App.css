@@ -61,7 +61,6 @@ a {
   min-height: 100vh;
   box-sizing: border-box;
   position: relative;
-  z-index: -4000;
 }
 
 main {
