@@ -1,0 +1,543 @@
+@media screen and (max-width: 1200px) {
+  .ReservationsNotice {
+    display: block;
+    font-family: 'Gabarito', cursive;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+    color: rgb(114, 114, 114);
+  }
+
+  /* new reservations page */
+
+  .RPageBackgroundHolder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1000;
+  }
+
+  .backgroundOverlayColor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #81a500cc;
+  }
+
+  .RPageBackgroundHolder > .Image {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .RFormHeader {
+    width: fit-content;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Gabarito', cursive;
+    font-weight: 600;
+    margin: 0 auto;
+    border: 0;
+    border-bottom: 1px solid white;
+    padding: 0 20px 3px;
+    color: white;
+    padding-top: 150px;
+  }
+
+  .RPageDescription {
+    font-size: 1.2rem;
+    font-family: 'Gabarito', cursive;
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .RForm {
+    font-size: 1rem;
+    font-family: 'Gabarito', cursive;
+    color: white;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  .formHandler {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .RFormSelectionFieldHolder {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+    margin: 0 auto;
+  }
+
+  .RFormInputHolder {
+    min-width: 250px;
+    width: 65%;
+    display: flex;
+    margin-left: 15px;
+  }
+
+  .RFormInputHolder:nth-child(1) {
+    justify-content: center;
+  }
+
+  .Date_R {
+    max-width: 200px;
+    text-align: center;
+  }
+
+  #course {
+    padding: 10px 10px;
+    border-radius: 20px;
+  }
+
+  .reservationInput {
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: 1px;
+    width: 100%;
+  }
+
+  .RButtonHolder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+
+  .reservationButton {
+    font-size: 1.1rem;
+    min-width: 200px;
+    width: 35%;
+    padding: 8px 0;
+    border-radius: 25px;
+    background-color: white;
+    border: 1px solid #617c00cc;
+  }
+
+  .reservationButton:hover {
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #ffb400;
+    color: white;
+  }
+
+  .reservationButton:disabled {
+    color: rgb(146, 146, 146);
+    font-weight: 500;
+    font-size: 1.2rem;
+    background-color: rgb(212, 212, 212);
+    cursor: not-allowed;
+  }
+
+  /* message modal */
+
+  .messageModalHolder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.274);
+  }
+
+  @keyframes loading {
+    from {
+      width: 100%;
+    }
+
+    to {
+      width: 0%;
+    }
+  }
+
+  @keyframes dropping {
+    from {
+      top: -40px;
+    }
+
+    to {
+      top: 40px;
+    }
+  }
+
+  @keyframes ascending {
+    from {
+      top: 40px;
+    }
+
+    to {
+      top: -65px;
+    }
+  }
+
+  .messageSlot {
+    background-color: white;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 15px 0 0;
+    position: relative;
+    animation: dropping 0.5s linear forwards, ascending 0.5s 4.5s linear forwards;
+  }
+
+  .message {
+    font-size: 1.2rem;
+    font-family: 'Gabarito', cursive;
+    color: #da9801;
+    padding: 0 25px;
+  }
+
+  .messageLoadingTime {
+    min-width: 0%;
+    width: 100%;
+    height: 7px;
+    background-color: #23af00;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 10px;
+    animation: loading 5s 0.7s linear forwards;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .ReservationsNotice {
+    display: block;
+    font-family: 'Gabarito', cursive;
+    font-size: 1.2rem;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 80%;
+    text-align: start;
+    color: rgb(114, 114, 114);
+    padding-left: 15px;
+  }
+
+  /* new reservations page */
+
+  .RPageBackgroundHolder {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1000;
+  }
+
+  .backgroundOverlayColor {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: #81a500cc;
+  }
+
+  .RPageBackgroundHolder > .Image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .RFormHeader {
+    width: fit-content;
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Gabarito', cursive;
+    font-weight: 600;
+    margin: 0 auto;
+    border: 0;
+    border-bottom: 1px solid white;
+    padding: 0 20px 3px;
+    color: white;
+    padding-top: 150px;
+  }
+
+  .RPageDescription {
+    font-size: 1.2rem;
+    font-family: 'Gabarito', cursive;
+    color: white;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .RForm {
+    font-size: 1rem;
+    font-family: 'Gabarito', cursive;
+    color: white;
+    width: 65%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  .formHandler {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .RFormSelectionFieldHolder {
+    width: 75%;
+    display: flex;
+  }
+
+  .RFormInputHolder {
+    width: 33.35%;
+    display: flex;
+    margin-left: 15px;
+  }
+
+  #course {
+    padding: 10px 10px;
+    border-radius: 20px;
+    width: 220px;
+  }
+
+  .reservationInput {
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: 1px;
+    width: 100%;
+  }
+
+  .RButtonHolder {
+    width: 25%;
+    text-align: center;
+  }
+
+  .reservationButton {
+    font-size: 1.1rem;
+    width: 80%;
+    padding: 8px 0;
+    border-radius: 25px;
+    background-color: white;
+    border: 1px solid #617c00cc;
+  }
+
+  .reservationButton:hover {
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: #ffb400;
+    color: white;
+  }
+
+  .reservationButton:disabled {
+    color: rgb(146, 146, 146);
+    font-weight: 500;
+    font-size: 1.2rem;
+    background-color: rgb(212, 212, 212);
+    cursor: not-allowed;
+  }
+
+  /* message modal */
+
+  .messageModalHolder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.274);
+  }
+
+  @keyframes loading {
+    from {
+      width: 100%;
+    }
+
+    to {
+      width: 0%;
+    }
+  }
+
+  @keyframes dropping {
+    from {
+      top: -40px;
+    }
+
+    to {
+      top: 40px;
+    }
+  }
+
+  @keyframes ascending {
+    from {
+      top: 40px;
+    }
+
+    to {
+      top: -65px;
+    }
+  }
+
+  .messageSlot {
+    background-color: white;
+    width: fit-content;
+    margin: 0 auto;
+    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 15px 0 0;
+    position: relative;
+    animation: dropping 0.5s linear forwards, ascending 0.5s 4.5s linear forwards;
+  }
+
+  .message {
+    font-size: 1.2rem;
+    font-family: 'Gabarito', cursive;
+    color: #da9801;
+    padding: 0 25px;
+  }
+
+  .messageLoadingTime {
+    min-width: 0%;
+    width: 100%;
+    height: 7px;
+    background-color: #23af00;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-top: 10px;
+    animation: loading 5s 0.7s linear forwards;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.reservations_holder {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--secondary-color);
+}
+
+.newReservationHolder {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: transparent;
+}
+
+.reservationsHeader {
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Gabarito', cursive;
+  border-bottom: 1.5px solid #ffb400;
+  width: fit-content;
+  padding: 0 6px;
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.RCardsHolder {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 15px;
+  padding: 0 10px;
+}
+
+.RCard {
+  position: relative;
+  max-height: 400px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 7px;
+  border-radius: 10px;
+  background-color: #bebebe;
+}
+
+.ReservationhoverCard {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.ReservationhoverCard:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.308);
+  box-shadow: 2px 2px 5px #96bf01;
+}
+
+.ReservationCourseImageView {
+  height: 50%;
+  object-fit: contain;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.RInfoHolder {
+  display: flex;
+  flex-direction: column;
+  column-gap: 5px;
+  justify-content: center;
+  width: 100%;
+}
+
+.ReservationCourseInfo {
+  width: 100%;
+  padding-top: 15px;
+}
+
+.RCourseName {
+  font-family: 'Gabarito', cursive;
+  font-size: 1.2rem;
+}
+
+.RCourseShortDescription {
+  font-family: 'Gabarito', cursive;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 10px;
+  height: 100px;
+  overflow-y: hidden;
+}
+
+.ReservedCourseDate {
+  color: rgb(68, 68, 68);
+}
+
+.RBold {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Gabarito', cursive;
+  color: black;
+  text-decoration: none;
+}

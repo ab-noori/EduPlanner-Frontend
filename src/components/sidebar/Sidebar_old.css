@@ -1,0 +1,165 @@
+/* src/components/Sidebar.css */
+.sidebar {
+  position: absolute;
+  background-color: white;
+  z-index: 99;
+}
+
+.nav {
+  position: relative;
+}
+
+.sidebar-minimizer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-right: 2px solid lightgray;
+}
+
+.small-screen-nav {
+  display: none;
+}
+
+.sidebar-toggle-button {
+  background: none;
+  border: none;
+}
+
+.sidebar-minimizer .bi-x {
+  font-size: 30px;
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.sidebar-minimizer .bi-list {
+  font-size: 30px;
+  font-weight: bold;
+  color: darkblue;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.sidebar-minimizer .bi-x:hover::before {
+  margin: 0;
+  padding: 0;
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+}
+
+/* Sidebar */
+
+.sidebar-container {
+  color: white;
+  width: 100%;
+  height: calc(100vh);
+  border-right: 2px solid lightgray;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Microsoft Edge and IE */
+}
+
+.sidebar-container::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-option {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 5px;
+  gap: 10px;
+}
+
+.nav-option i.bi {
+  color: blue;
+  font-size: 26px;
+  font-weight: bolder;
+}
+
+.nav-option h5 {
+  margin: 0;
+  color: black;
+  white-space: nowrap;
+}
+
+.nav-option:hover,
+.nav-option:hover .bi,
+.nav-option:hover h5 {
+  color: white;
+  background-color: green;
+}
+
+.active,
+.nav-option.active h5,
+.nav-option.active .bi {
+  color: white;
+  background-color: green;
+}
+
+@media screen and (min-width: 768px) {
+  .navCollapse {
+    width: 50px;
+    justify-content: center;
+  }
+
+  .navCollapse .navbar-brand,
+  .navCollapse .nav-option h5 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sidebar-minimizer,
+  .sidebar-container {
+    display: none;
+  }
+
+  .smallNavCollapse {
+    display: block;
+  }
+
+  .nav {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid lightgray;
+  }
+
+  .small-screen-nav {
+    width: 100%;
+    background-color: #50ce80;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .small-screen-nav .bi-x {
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  .small-screen-nav .bi-list {
+    font-size: 30px;
+    font-weight: bold;
+    color: darkblue;
+    cursor: pointer;
+    margin-right: 12px;
+  }
+
+  .small-screen-nav .bi-x:hover::before {
+    margin: 0;
+    padding: 0;
+    background-color: red;
+    border-radius: 50%;
+    color: white;
+  }
+}

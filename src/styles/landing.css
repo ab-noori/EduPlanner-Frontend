@@ -1,0 +1,291 @@
+.landing_page_holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary-color);
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+  .edu_logo_Holder {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border: 0;
+    border-radius: 50%;
+    margin-top: 50px;
+  }
+
+  .edu_logo {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  .auth_buttons {
+    height: 30vh;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    margin-top: 150px;
+  }
+
+  .login_button {
+    padding: 0 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #acdb01;
+  }
+
+  .login_button:hover {
+    background-color: #ffb400;
+    color: white;
+  }
+
+  .signup_button {
+    padding: 0 20px;
+    background-color: #ffb400;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .signup_button:hover {
+    background-color: #acdb01;
+    color: white;
+  }
+
+  .imagery {
+    width: 100vw;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hover_text_holder {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 3;
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 90%;
+  }
+
+  .hover_text_title {
+    font-size: 2rem;
+    font-family: 'Lilita One', cursive;
+    color: white;
+    width: 100%;
+  }
+
+  .hover_text_description {
+    font-size: 1rem;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    width: 90%;
+    padding: 10px 12px;
+    border-radius: 4px;
+  }
+
+  .display_image {
+    width: 95vw;
+    height: 45vh;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+
+  .d_image_holder {
+    width: 95vw;
+    height: 45vh;
+    border-radius: 40px;
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.3;
+    overflow-x: hidden;
+  }
+
+  .display_image > img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    object-position: center center;
+    display: block;
+    border-radius: 40px;
+  }
+
+  .footer {
+    height: 20vh;
+    width: 100vw;
+    padding: 20px 30px;
+    background-color: #2e2e2e;
+  }
+
+  .footer_info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    row-gap: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .edu_logo_Holder {
+    height: 50vh;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border: 0;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 50px;
+  }
+
+  .edu_logo {
+    width: 100%;
+    aspect-ratio: 1/1;
+  }
+
+  .auth_buttons {
+    height: 30vh;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+    margin-top: 150px;
+  }
+
+  .login_button {
+    padding: 15px 35px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #acdb01;
+  }
+
+  .login_button:hover {
+    background-color: #ffb400;
+    color: white;
+  }
+
+  .signup_button {
+    padding: 15px 35px;
+    background-color: #ffb400;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  .signup_button:hover {
+    background-color: #acdb01;
+    color: white;
+  }
+
+  .imagery {
+    width: 100vw;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hover_text_holder {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 3;
+    margin-top: 25px;
+    margin-left: 20px;
+    width: 90%;
+  }
+
+  .hover_text_title {
+    font-size: 4.5rem;
+    font-family: 'Lilita One', cursive;
+    color: white;
+    width: 100%;
+  }
+
+  .hover_text_description {
+    font-size: 1.8rem;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    width: 90%;
+    padding: 10px 12px;
+    border-radius: 4px;
+  }
+
+  .display_image {
+    width: 95vw;
+    height: 100vh;
+    margin-bottom: 10px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    box-sizing: border-box;
+  }
+
+  .display_image:nth-child(2) > .hover_text_holder {
+    text-align: right;
+    right: 4%;
+  }
+
+  .display_image:nth-child(2) > .hover_text_holder > .hover_text_description {
+    width: 100%;
+    padding-left: 100px;
+  }
+
+  .d_image_holder {
+    width: 95vw;
+    height: 100vh;
+    border-radius: 40px;
+    position: absolute;
+    z-index: 1;
+    background-color: black;
+    opacity: 0.6;
+  }
+
+  .display_image > img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    border-radius: 40px;
+  }
+
+  .footer {
+    height: 10vh;
+    width: 100vw;
+    padding: 10px 20px;
+    background-color: #2e2e2e;
+  }
+
+  .footer_info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    row-gap: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,72 @@
+/* DeleteCoursePage.css */
+
+#delete_course_container {
+  text-align: center;
+  margin-top: 20px;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+#delete_course_container .card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 20px;
+  margin-top: 20px;
+}
+
+#delete_course_container .card {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.3),
+    -23px 0 20px -23px rgba(0, 0, 0, 0.8),
+    23px 0 20px -23px rgba(0, 0, 0, 0.8),
+    inset 0 0 40px rgba(0, 0, 0, 0.1);
+  border-top: 1px solid rgb(135, 172, 0);
+  border-bottom: 1px solid rgb(135, 172, 0);
+}
+
+#delete_course_container .card_img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.img-fluid {
+  height: 70%;
+  width: 70%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+#delete_course_container .card_title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#delete_course_container .delete_button {
+  margin-top: 10px;
+  background-color: #ffb400;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#delete_course_container .delete_button:hover {
+  background-color: #fd0000;
+  box-shadow:
+    0 4px 4px rgba(0, 0, 0, 0.1),
+    0 1px 6px rgba(0, 0, 0, 0.05),
+    0 8px 8px rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.1),
+    8px 32px 32px rgba(0, 0, 0, 0.15),
+    8px 64px 64px rgba(0, 0, 0, 0.15);
+  transform:
+    scale(1.05)
+    translateY(-0.5rem);
+}

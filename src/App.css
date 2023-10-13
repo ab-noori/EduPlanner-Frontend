@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Gabarito&family=Lilita+One&family=Oswald&family=Satisfy&display=swap');
+
+:root {
+  --primary-color: #96bf00;
+  --secondary-color: #e2e3e5;
+  --complimentary-color: #ffb400;
+  --base-light: #fff;
+  --base-dark: #000;
+  --small-mg: 10px;
+  --mediumn-mg: 25px;
+  --large-mg: 50px;
+  --small-pd: 5px;
+  --mediumn-pd: 15px;
+  --large-pd: 30px;
+  --primary-font: 'Oswald', sans-serif;
+  --secondary-font: 'Satisfy', cursive;
+  --complimentary-font: 'Lilita One', cursive;
+  --tertiary-font: 'Gabarito', cursive;
+  --other-font: 'Dancing Script', cursive;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+  html,
+  body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: darkgray;
+}
+
+.button {
+  max-height: 9vh;
+  border: 0;
+  border-radius: 5.5px;
+  box-shadow: 2px 2px 5px rgb(100, 100, 100);
+}
+
+.App {
+  background-color: var(--secondary-color);
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+}
+
+main {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  padding: 0;
+}
