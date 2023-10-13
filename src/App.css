@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Gabarito&family=Lilita+One&family=Oswald&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Gabarito&family=Lilita+One&family=Oswald&family=Satisfy&display=swap');
 
 :root {
-  --primary-color: #96bf01;
+  --primary-color: #96bf00;
   --secondary-color: #e2e3e5;
   --complimentary-color: #ffb400;
   --base-light: #fff;
@@ -16,6 +16,7 @@
   --secondary-font: 'Satisfy', cursive;
   --complimentary-font: 'Lilita One', cursive;
   --tertiary-font: 'Gabarito', cursive;
+  --other-font: 'Dancing Script', cursive;
 }
 
 * {

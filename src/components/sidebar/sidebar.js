@@ -4,10 +4,16 @@ import PropTypes from 'prop-types';
 import github from '../../assets/images/icons/github.png';
 import gmail from '../../assets/images/icons/gmail.png';
 import linkdn from '../../assets/images/icons/linkdn.png';
+import logo from '../../assets/images/logo2.png';
 
 const Sidebar = ({ isOpen, toggle }) => (
   <div className={`sidebar ${isOpen ? 'open' : ''}`}>
-    <button type="button" className="close-button" onClick={toggle}>X</button>
+    <section className="SideBarTopArea">
+      <a href="/">
+        <img src={logo} alt="App logo" className="sideBarLogo" />
+      </a>
+      <button type="button" className="close-button" onClick={toggle}>X</button>
+    </section>
     <nav className="navigationLinksHolder">
       <NavLink className="nav-option" to="/" onClick={toggle}>
         <h5>All COURSES</h5>

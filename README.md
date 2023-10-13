@@ -82,7 +82,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [N/A]()
+- [EduPlanner](https://edu-planner.onrender.com)
 
 ## 🔗 Back End Link <a name="documentation"></a>
 
