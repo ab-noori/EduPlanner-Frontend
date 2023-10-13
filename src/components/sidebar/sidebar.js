@@ -1,6 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import github from '../../assets/images/icons/github.png';
+import gmail from '../../assets/images/icons/gmail.png';
+import linkdn from '../../assets/images/icons/linkdn.png';
 
 const Sidebar = ({ isOpen, toggle }) => (
   <div className={`sidebar ${isOpen ? 'open' : ''}`}>
@@ -30,6 +33,20 @@ const Sidebar = ({ isOpen, toggle }) => (
         <h5>LOG OUT</h5>
       </NavLink>
     </nav>
+    <section className="otherNavInfo">
+      <section className="socials">
+        <a href="https://github.com/ab-noori/EduPlanner-Backend">
+          <img src={github} alt="social media logo" className="socials_logo" />
+        </a>
+        <a href="https://github.com/ab-noori/EduPlanner-Backend/tree/dev#authors">
+          <img src={linkdn} alt="social media logo" className="socials_logo" />
+        </a>
+        <a href="https://github.com/ab-noori/EduPlanner-Backend/tree/dev#authors">
+          <img src={gmail} alt="social media logo" className="socials_logo" />
+        </a>
+      </section>
+      <span className="rightsReserved">@Eduplanner corporations</span>
+    </section>
   </div>
 );
 
