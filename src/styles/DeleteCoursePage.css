@@ -33,6 +33,13 @@
   border-radius: 6px;
 }
 
+.img-fluid {
+  height: 70%;
+  width: 70%;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
 #delete_course_container .card_title {
   font-size: 18px;
   font-weight: bold;
