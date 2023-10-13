@@ -34,26 +34,30 @@ const CourseDetail = () => {
   }
 
   return (
-    <div className="container-fluid pt-5">
-      <div className="row">
-        <div className="col-md-6 order-md-2 d-flex flex-column justify-content-center">
-          <h2>{course.name}</h2>
-          <p>
-            Description:
-            {course.description}
-          </p>
-          <p>
-            Fee: $
-            {course.fee}
-          </p>
-          <p>
-            Start Date:
-            {course.startDate}
-          </p>
-          <button type="button" className="btn btn-success custom-button" onClick={handleReserveClick}>Reserve</button>
-        </div>
-        <div className="col-md-6 order-md-1 d-flex justify-content-center align-items-center">
-          <img src={course.image_url} alt={course.name} className="img-fluid" />
+    <div className="App">
+      <div className="container-fluid">
+        <div className="container-fluid pt-5">
+          <div className="row">
+            <div className="col-md-6 order-md-2 d-flex flex-column justify-content-center">
+              <h2>{course.name}</h2>
+              <p>
+                Description:
+                {course.description}
+              </p>
+              <p>
+                Fee: $
+                {course.fee}
+              </p>
+              <p>
+                Start Date:
+                {course.startDate}
+              </p>
+              <button type="button" className="btn btn-success custom-button" onClick={handleReserveClick}>Reserve</button>
+            </div>
+            <div className="col-md-6 order-md-1 d-flex justify-content-center align-items-center">
+              <img src={course.image_url} alt={course.name} className="img-fluid" />
+            </div>
+          </div>
         </div>
       </div>
     </div>

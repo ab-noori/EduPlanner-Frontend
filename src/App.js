@@ -15,37 +15,35 @@ import NewReservation from './components/newReservation';
 import CourseDetail from './components/CourseDetail';
 import CourseForm from './components/course/courseForm';
 import Logout from './components/logout';
+import SideBarHolder from './components/sidebar/sidebarholder';
 
 function App() {
   const status = sessionStorage.getItem('status') || sessionStorage.setItem('status', 'false');
 
   return (
-    <div className="App">
-      <div className="container-fluid">
-        <Router>
+    <>
+      <Router>
+        <SideBarHolder />
+        {status === 'true' ? (
           <Routes>
-            {status === 'true' ? (
-              <>
-                <Route exact path="/" element={<MainPage />} />
-                <Route path="/course-form" element={<CourseForm />} />
-                <Route path="my_reservations" element={<ReservationsPage />} />
-                <Route path="new_reservation" element={<NewReservation />} />
-                <Route exact path="/logout" element={<Logout />} />
-                <Route path="/courses/:id" element={<CourseDetail />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
-              </>
-            ) : (
-              <>
-                <Route path="/" element={<LandingPage />} />
-                <Route path="login" element={<Login />} />
-                <Route path="signup" element={<Signup />} />
-                <Route path="*" element={<Navigate to="/" replace />} />
-              </>
-            )}
+            <Route exact path="/" element={<MainPage />} />
+            <Route path="/course-form" element={<CourseForm />} />
+            <Route path="my_reservations" element={<ReservationsPage />} />
+            <Route path="new_reservation" element={<NewReservation />} />
+            <Route exact path="/logout" element={<Logout />} />
+            <Route path="/courses/:id" element={<CourseDetail />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
-        </Router>
-      </div>
-    </div>
+        ) : (
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="login" element={<Login />} />
+            <Route path="signup" element={<Signup />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        )}
+      </Router>
+    </>
   );
 }
 

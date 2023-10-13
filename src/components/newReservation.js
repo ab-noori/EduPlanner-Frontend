@@ -3,7 +3,7 @@ import imageBackground from '../assets/images/reservation_background.jpg';
 
 function NewReservation() {
   return (
-    <>
+    <div className="newReservationHolder">
       <div className="RPageBackgroundHolder">
         <div className="backgroundOverlayColor" />
         <img src={imageBackground} alt="reservations background" className="Image" />
@@ -16,7 +16,7 @@ function NewReservation() {
         but enhances the overall learning experience.
       </p>
       <ReservationForm />
-    </>
+    </div>
   );
 }
 

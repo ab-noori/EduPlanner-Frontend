@@ -53,3 +53,21 @@ a {
   border-radius: 5.5px;
   box-shadow: 2px 2px 5px rgb(100, 100, 100);
 }
+
+.App {
+  background-color: var(--secondary-color);
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+  z-index: -4000;
+}
+
+main {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  padding: 0;
+}

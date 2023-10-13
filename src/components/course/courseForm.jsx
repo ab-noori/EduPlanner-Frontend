@@ -47,80 +47,84 @@ const CourseForm = () => {
   };
 
   return (
-    <div className="container mt-4">
-      <div className="row justify-content-center">
-        <div className="col-md-8">
-          <div className="card form-container shadow">
-            <div className="card-header">
-              <h2 className="card-title text-center mb-1">Create a New Course</h2>
-            </div>
-            <div className="card-body">
-              <form onSubmit={handleSubmit}>
-                <div className="mb-1">
-                  <label htmlFor="name" className="form-label">Name:</label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    name="name"
-                    id="name"
-                    value={courseData.name}
-                    onChange={handleInputChange}
-                    required
-                  />
+    <div className="App">
+      <div className="container-fluid">
+        <div className="container pt-4">
+          <div className="row justify-content-center">
+            <div className="col-md-8">
+              <div className="card form-container shadow">
+                <div className="card-header">
+                  <h2 className="card-title text-center mb-1">Create a New Course</h2>
                 </div>
-                <div className="mb-1">
-                  <label htmlFor="fee" className="form-label">Fee:</label>
-                  <div className="input-group">
-                    <span className="input-group-text">$</span>
-                    <input
-                      type="number"
-                      className="form-control"
-                      name="fee"
-                      id="fee"
-                      value={courseData.fee}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
+                <div className="card-body">
+                  <form onSubmit={handleSubmit}>
+                    <div className="mb-1">
+                      <label htmlFor="name" className="form-label">Name:</label>
+                      <input
+                        type="text"
+                        className="form-control"
+                        name="name"
+                        id="name"
+                        value={courseData.name}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    <div className="mb-1">
+                      <label htmlFor="fee" className="form-label">Fee:</label>
+                      <div className="input-group">
+                        <span className="input-group-text">$</span>
+                        <input
+                          type="number"
+                          className="form-control"
+                          name="fee"
+                          id="fee"
+                          value={courseData.fee}
+                          onChange={handleInputChange}
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div className="mb-1">
+                      <label htmlFor="startDate" className="form-label">Start Date:</label>
+                      <input
+                        type="date"
+                        className="form-control"
+                        name="startDate"
+                        id="startDate"
+                        value={courseData.startDate}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    <div className="mb-1">
+                      <label htmlFor="image" className="form-label">Image:</label>
+                      <input
+                        type="file"
+                        className="form-control"
+                        name="image"
+                        id="image"
+                        accept="image/*"
+                        onChange={handleImageChange}
+                      />
+                    </div>
+                    <div className="mb-1">
+                      <label htmlFor="description" className="form-label">Description:</label>
+                      <textarea
+                        className="form-control"
+                        name="description"
+                        id="description"
+                        value={courseData.description}
+                        onChange={handleInputChange}
+                        required
+                      />
+                    </div>
+                    <div className="text-center mb-4">
+                      <button type="submit" className="btn btn-success">Create Course</button>
+                    </div>
+                  </form>
                 </div>
-                <div className="mb-1">
-                  <label htmlFor="startDate" className="form-label">Start Date:</label>
-                  <input
-                    type="date"
-                    className="form-control"
-                    name="startDate"
-                    id="startDate"
-                    value={courseData.startDate}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-                <div className="mb-1">
-                  <label htmlFor="image" className="form-label">Image:</label>
-                  <input
-                    type="file"
-                    className="form-control"
-                    name="image"
-                    id="image"
-                    accept="image/*"
-                    onChange={handleImageChange}
-                  />
-                </div>
-                <div className="mb-1">
-                  <label htmlFor="description" className="form-label">Description:</label>
-                  <textarea
-                    className="form-control"
-                    name="description"
-                    id="description"
-                    value={courseData.description}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-                <div className="text-center mb-4">
-                  <button type="submit" className="btn btn-success">Create Course</button>
-                </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>
