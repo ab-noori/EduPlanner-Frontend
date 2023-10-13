@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Arrow({ className, onClick }) {
+const Arrow = ({ className, onClick }) => {
   const handleClick = () => {
     if (onClick) {
       onClick();
@@ -30,7 +30,7 @@ function Arrow({ className, onClick }) {
       aria-label="Next Slide"
     />
   );
-}
+};
 
 Arrow.propTypes = {
   className: PropTypes.string,

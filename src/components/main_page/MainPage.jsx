@@ -2,11 +2,10 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Slider from 'react-slick';
 import { fetchMainPage, selectMainPage } from '../../app/features/main_page/mainPageSlice';
-// import Sidebar from './Sidebar';
 import Arrow from './Arrow';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import './MainPage.css';
+import './main.css';
 import LoadingModal from '../../shared/loading';
 
 const MainPage = () => {
@@ -57,8 +56,8 @@ const MainPage = () => {
   return (
     <div className="App">
       <div className="container-fluid">
-        <main>
-          <div className="text-center mb-5 pt-5">
+        <main className="col-md-9 ms-sm-auto col-lg-10 pt-5 position-relative" style={{ minHeight: '100vh' }}>
+          <div className="text-center mb-5">
             <h1 className="fw-bold">New Courses</h1>
             <h6 className="text-secondary">Please select your favorit class</h6>
           </div>

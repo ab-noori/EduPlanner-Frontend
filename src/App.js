@@ -14,26 +14,30 @@ import ReservationsPage from './components/reservations';
 import NewReservation from './components/newReservation';
 import CourseDetail from './components/CourseDetail';
 import CourseForm from './components/course/courseForm';
+import DeleteCoursePage from './components/DeleteCoursePage';
 import Logout from './components/logout';
 import SideBarHolder from './components/sidebar/sidebarholder';
 
-function App() {
+const App = () => {
   const status = sessionStorage.getItem('status') || sessionStorage.setItem('status', 'false');
 
   return (
     <>
       <Router>
-        <SideBarHolder />
         {status === 'true' ? (
-          <Routes>
-            <Route exact path="/" element={<MainPage />} />
-            <Route path="/course-form" element={<CourseForm />} />
-            <Route path="my_reservations" element={<ReservationsPage />} />
-            <Route path="new_reservation" element={<NewReservation />} />
-            <Route exact path="/logout" element={<Logout />} />
-            <Route path="/courses/:id" element={<CourseDetail />} />
-            <Route path="*" element={<Navigate to="/" replace />} />
-          </Routes>
+          <>
+            <SideBarHolder />
+            <Routes>
+              <Route exact path="/" element={<MainPage />} />
+              <Route path="/course-form" element={<CourseForm />} />
+              <Route path="/my_reservations" element={<ReservationsPage />} />
+              <Route path="/new_reservation" element={<NewReservation />} />
+              <Route exact path="/logout" element={<Logout />} />
+              <Route path="/courses/:id" element={<CourseDetail />} />
+              <Route path="/delete-course" element={<DeleteCoursePage />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </>
         ) : (
           <Routes>
             <Route path="/" element={<LandingPage />} />
@@ -45,6 +49,6 @@ function App() {
       </Router>
     </>
   );
-}
+};
 
 export default App;

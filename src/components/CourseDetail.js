@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import LoadingModal from '../shared/loading';
-import './CourseDetail.css';
+import '../styles/CourseDetail.css';
 
 const CourseDetail = () => {
   const { id } = useParams();
@@ -9,7 +9,7 @@ const CourseDetail = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://127.0.0.1:3000/api/courses/${id}`)
+    fetch(`https://edu-planner-backend.onrender.com/api/courses/${id}`)
       .then((response) => response.json())
       .then((data) => setCourse(data));
   }, [id]);
@@ -34,33 +34,39 @@ const CourseDetail = () => {
   }
 
   return (
-    <div className="App">
-      <div className="container-fluid">
-        <div className="container-fluid pt-5">
-          <div className="row">
-            <div className="col-md-6 order-md-2 d-flex flex-column justify-content-center">
-              <h2>{course.name}</h2>
-              <p>
-                Description:
-                {course.description}
+    <>
+      <div className="CourseHolder">
+        <div className="CourseDetailsPageDivider">
+          <div className="CourseDetailsImageHolder">
+            <img src={course.image_url} alt={course.name} className="CourseDetailsImage" />
+          </div>
+          <div className="CourseDetailsInfoHolder">
+            <h2 className="courseDetailsName">{course.name}</h2>
+            <section className="CourseDetailsTextInfo">
+              <p className="courseDetailsParagragh">
+                <b>Description:</b>
+                <span>{course.description}</span>
               </p>
-              <p>
-                Fee: $
-                {course.fee}
+              <p className="courseDetailsFee">
+                <b>Fee:</b>
+                <span>
+                  $
+                  {course.fee}
+                </span>
               </p>
-              <p>
-                Start Date:
-                {course.startDate}
+              <p className="courseDetailsDate">
+                <b>StartDate:</b>
+                <span>{course.startDate}</span>
               </p>
-              <button type="button" className="btn btn-success custom-button" onClick={handleReserveClick}>Reserve</button>
-            </div>
-            <div className="col-md-6 order-md-1 d-flex justify-content-center align-items-center">
-              <img src={course.image_url} alt={course.name} className="img-fluid" />
-            </div>
+            </section>
+            <button type="button" className="custom-button" onClick={handleReserveClick}>Reserve</button>
           </div>
         </div>
       </div>
-    </div>
+      <div className="BlurImageDetails">
+        <img src={course.image_url} alt="blur" className="BlurImage" />
+      </div>
+    </>
   );
 };
 

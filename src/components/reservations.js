@@ -5,7 +5,7 @@ import ReservationCard from '../shared/reservationCard';
 import LoadingModal from '../shared/loading';
 import '../styles/reservations.css';
 
-function ReservationsPage() {
+const ReservationsPage = () => {
   const dispatch = useDispatch();
   const status = useSelector((state) => state.reservations.status);
   const allReservations = useSelector((state) => state.reservations.reservations);
@@ -40,6 +40,6 @@ function ReservationsPage() {
       ) : null}
     </>
   );
-}
+};
 
 export default ReservationsPage;

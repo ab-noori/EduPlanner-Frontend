@@ -8,7 +8,7 @@ const initialState = {
 };
 
 export const retrieveCourses = createAsyncThunk('courses/retrieveCourses', async () => {
-  const request = await axios.get('http://localhost:3000/api/courses');
+  const request = await axios.get('https://edu-planner-backend.onrender.com/api/courses');
   const response = await request.data;
   return response;
 });

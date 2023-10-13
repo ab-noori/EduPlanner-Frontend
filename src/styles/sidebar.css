@@ -25,7 +25,7 @@
   top: 0;
   height: 100%;
   width: 280px;
-  background-color: #ffffff;
+  background-color: #fff;
   color: var(--primary-color);
   transition: left 0.3s ease-in-out;
   font-family: 'Gabarito', cursive;

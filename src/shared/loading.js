@@ -22,23 +22,21 @@ const ModalCompHolder = {
   alignItems: 'center',
 };
 
-function LoadingModal() {
-  return (
-    <>
-      <div style={ModalCompHolder}>
-        <Circles
-          height="80"
-          width="80"
-          color="#ffb400"
-          ariaLabel="circles-loading"
-          wrapperStyle={{}}
-          wrapperClass=""
-          visible
-        />
-      </div>
-      <div style={ModalCompBackground} />
-    </>
-  );
-}
+const LoadingModal = () => (
+  <>
+    <div style={ModalCompHolder}>
+      <Circles
+        height="80"
+        width="80"
+        color="#ffb400"
+        ariaLabel="circles-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible
+      />
+    </div>
+    <div style={ModalCompBackground} />
+  </>
+);
 
 export default LoadingModal;

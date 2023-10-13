@@ -10,7 +10,7 @@ const initialState = {
 export const retrieveReservs = createAsyncThunk('reservations/retrieveReservs', async () => {
   const loggedUser = JSON.parse(sessionStorage.getItem('logged_user'));
   const userId = loggedUser.id;
-  const request = await axios.get(`http://localhost:3000/api/reservations?user_id=${userId}`);
+  const request = await axios.get(`https://edu-planner-backend.onrender.com/api/reservations?user_id=${userId}`);
   const response = await request.data;
   return response || null;
 });
@@ -21,7 +21,7 @@ export const createReservation = createAsyncThunk('reservations/createReservatio
       ...reservationParams,
     },
   };
-  const request = await axios.post('http://localhost:3000/api/reservations', reqBody);
+  const request = await axios.post('https://edu-planner-backend.onrender.com/api/reservations', reqBody);
   const response = await request.data;
   return response || null;
 });
