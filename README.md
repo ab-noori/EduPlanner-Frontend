@@ -2,11 +2,9 @@
 
 > # EduPlanner
 
-| Project Login Page |
-|---------------------------------------|
-|<div align="center" width="auto"><img alt="Finance-Tracker login" src="src/assets/images/project-image.png"/></div>|
-
-
+| Project View Page                                                                                                       |
+| ----------------------------------------------------------------------------------------------------------------------- |
+| <div align="center" width="auto"><img alt="Finance-Tracker login" src="src/assets/images/project_image_app.png"/></div> |
 
 <a name="readme-top"></a>
 
@@ -18,7 +16,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-   - [🚀 Live Demo](#live-demo)
+  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -37,6 +35,7 @@
 # 📖 [EduPlanner] <a name="about-project"></a>
 
 > **[EduPlanner]** This project involves the development of an application where online classes with teachers can be reserved by students. It is built with React as the frontend and Ruby on Rails as the backend, enabling students to easily book classes with their preferred teachers among the available options.
+
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -82,14 +81,15 @@
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
- - [N/A]()
+
+- [N/A]()
 
 ## 🔗 Back End Link <a name="documentation"></a>
+
 - [EduPlanner Backend](https://github.com/ab-noori/EduPlanner-Backend)
-  
+
   > _Our backend code is stored in a separate repository and is built using ruby on rails. The backend is responsible for processing data and handling API requests from the frontend. To access our backend code, please click on the provided link below._
 
- 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -101,6 +101,7 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 In order to run this project you need:
+
 - [Ruby on Rails](https://rubyonrails.org/) installed and running. To get more information, read the [installation guide](https://guides.rubyonrails.org/).
 
 - [PostgreSQL](https://www.postgresql.org/) installed and running
@@ -117,6 +118,7 @@ Clone this repository to your desired folder:
   cd my-folder
   https://github.com/ab-noori/EduPlanner-Frontend.git
 ```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Install
@@ -127,6 +129,7 @@ Install this project with:
     cd EduPlanner-Frontend
     npm install
 ```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Usage
@@ -136,6 +139,7 @@ To run the project, execute the following command:
 ```sh
   npm start
 ```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
@@ -163,6 +167,7 @@ To run the project, execute the following command:
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
+
 - [ ] **[Implement proper user authentication from the front-end to the server]**
 - [ ] **[Ensure that only admin users can access the "Add class" and "Delete class" links]**
 
@@ -172,9 +177,9 @@ To run the project, execute the following command:
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-  Contributions, issues, and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
-  Feel free to check the [issues page](https://github.com/ab-noori/EduPlanner-Frontend/issues/new).
+Feel free to check the [issues page](https://github.com/ab-noori/EduPlanner-Frontend/issues/new).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -182,7 +187,7 @@ To run the project, execute the following command:
 
 ## ⭐️ Show your support <a name="support"></a>
 
-  If you like this project, give it a star.
+If you like this project, give it a star.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -190,14 +195,12 @@ To run the project, execute the following command:
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-  First, I would like to thank Microverse and my coding partners, and then I would like to give special credit to the creator of the design ([Gregoire Vella on Behance](https://www.behance.net/gregoirevella)) that I have used in my project.
+First, I would like to thank Microverse and my coding partners, and then I would like to give special credit to the creator of the design ([Gregoire Vella on Behance](https://www.behance.net/gregoirevella)) that I have used in my project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
