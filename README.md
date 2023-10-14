@@ -22,7 +22,6 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -83,6 +82,9 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [EduPlanner](https://edu-planner.onrender.com)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## 🔗 Back End Link <a name="documentation"></a>
