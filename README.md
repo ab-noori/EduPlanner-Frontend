@@ -84,12 +84,10 @@
 
 - [EduPlanner](https://edu-planner.onrender.com)
 
+
 ## 🔗 Back End Link <a name="documentation"></a>
-
-- [EduPlanner Backend](https://github.com/ab-noori/EduPlanner-Backend)
-
-  > _Our backend code is stored in a separate repository and is built using ruby on rails. The backend is responsible for processing data and handling API requests from the frontend. To access our backend code, please click on the provided link below._
-
+  > _Our [EduPlanner Backend](https://github.com/ab-noori/EduPlanner-Backend) code is stored in a separate repository and is built using ruby on rails. The backend is responsible for processing data and handling API requests from the front end. To access our backend code, please click [here](https://github.com/ab-noori/EduPlanner-Backend)._
+ 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
