@@ -4,7 +4,7 @@
 
 | Project View Page                                                                                                       |
 | ----------------------------------------------------------------------------------------------------------------------- |
-| <div align="center" width="auto"><img alt="Finance-Tracker login" src="src/assets/images/project_image_app.png"/></div> |
+| <div align="center" width="auto"><img alt="Finance-Tracker login" src="src/assets/images/edu-screenshot.PNG"/></div> |
 
 <a name="readme-top"></a>
 
